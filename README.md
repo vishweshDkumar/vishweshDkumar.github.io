@@ -4,17 +4,21 @@ Outputs for some given questions
 Questions are given as below:
 
 Remove Nth from End of list : https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
 [Images + Changes](/Remove%20Nth%20from%20end%20of%20list.html)
 
 Generate Parenthesis : https://leetcode.com/problems/generate-parentheses/
+
 [Images + Changes](generateParenthesis.html)
 
 Inorder Traversal : https://leetcode.com/problems/binary-tree-inorder-traversal/
+
 [Images + Changes](inorder_Traversal.html)
 
 Container with most water : https://leetcode.com/problems/container-with-most-water/
 
 [Images + Changes](/Container%20with%20most%20water.html)
+
 Add Two Numbers : https://leetcode.com/problems/add-two-numbers/
 
 [Images + Changes](Add2Numbers.html)
