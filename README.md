@@ -54,7 +54,7 @@ Odd Even Linked List : https://leetcode.com/problems/odd-even-linked-list/
 
 
 
-The corresponding functions are called in [leetcode.py](leetcode.py)
+The corresponding functions are called in [leetcode.py](https://github.com/vishweshDkumar/vishweshDkumar.github.io/blob/master/leetcode.py)
 
 Changes.txt marks the variable changes in format of (prev value , new value , line of change,  file_name)
 
