@@ -42,6 +42,11 @@ Permute : https://leetcode.com/problems/permutations/
 
 [Stack Visualized](permute_stack.html)
 
+My Question : (Designed to show usage of all features)
+[Variable Changes](my_test_variable.html)
+
+
+[Stack Visualized](my_test_stack.html)
 
 
 Kth Smallest Element : https://leetcode.com/problems/kth-smallest-element-in-a-bst/
