@@ -1,0 +1,10 @@
+digraph {
+	label="Graph of variable: head"
+	31 [label=1]
+	32 [label=2]
+	31 -> 32 [label=right]
+	33 [label=3]
+	32 -> 33 [label=left]
+	34 [label=4]
+	32 -> 34 [label=right]
+}

@@ -3,5 +3,5 @@ digraph "Call Stack" {
 	return_node [label="Condition used : No Test
  Return Value : None" color=red shape=ellipse]
 	call_stack:f0 -> return_node [color=red]
-	call_stack [label="{{<f0> TreeNode(4)| line:38| args \{'val': 4, 'left': None, 'right': None\}}}"]
+	call_stack [label="{{<f0> TreeNode(4)| line:39| args \{'val': 4, 'left': None, 'right': None\}}}"]
 }

@@ -18,7 +18,8 @@ class TreeNode:
   
 def inorderTraversal(root):
     head = root # watchvar btree:left:right:val head
-    res, stack = [], [] # watchvar ref:head:btree root
+    res = [] # watchvar ref:head:btree root
+    stack = [] # watchvar res
     node = None # watchvar ref:head:btree node
     while True:
         while root: 

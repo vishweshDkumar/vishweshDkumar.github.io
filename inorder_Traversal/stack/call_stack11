@@ -4,5 +4,5 @@ digraph "Call Stack" {
 
  Return Value : [1, 3, 2, 4]" color=red shape=ellipse]
 	call_stack:f0 -> return_node [color=red]
-	call_stack [label="{{<f0> inorderTraversal(a)| line:42| args \{'root': 1 3 2 4\}}}"]
+	call_stack [label="{{<f0> inorderTraversal(a)| line:43| args \{'root': 1 3 2 4\}}}"]
 }
