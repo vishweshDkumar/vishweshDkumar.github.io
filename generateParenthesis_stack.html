@@ -1,0 +1,71 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> 
+</code><code> 
+</code><code> def generateParenthesis(N):
+</code><code>     if N == 0: return ['']
+</code><code>     ans = [] # watchvar ans
+</code><code>     for c in range(N):
+</code><code>         for left in generateParenthesis(c):
+</code><code>             for right in generateParenthesis(N-1-c):
+</code><code>                 ans.append('({}){}'.format(left, right))
+</code><code>     return ans
+</code><code> 
+</code><code> 
+</code><code> def go():
+</code><code> 	# https://leetcode.com/problems/generate-parentheses/
+</code><code> 
+</code><code> 	generateParenthesis(3)</code></pre><h3>Step:1,New function call at Line:16</h3><br>Code executed:<code>	generateParenthesis(3)</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack2.png'></img><br><br><br><h3>Step:2,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack3.png'></img><br><br><br><h3>Step:3,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack4.png'></img><br><br><br><h3>Step:4,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack5.png'></img><br><br><br><h3>Step:5,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack6.png'></img><br><br><br><h3>Step:6,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack7.png'></img><br><br><br><h3>Step:7,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack8.png'></img><br><br><br><h3>Step:8,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack9.png'></img><br><br><br><h3>Step:9,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack10.png'></img><br><br><br><h3>Step:10,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack11.png'></img><br><br><br><h3>Step:11,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack12.png'></img><br><br><br><h3>Step:12,Return seen at Line:10</h3><br>Code executed:<code>    return ans
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack13.png'></img><br><br><br><h3>Step:13,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack14.png'></img><br><br><br><h3>Step:14,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack15.png'></img><br><br><br><h3>Step:15,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack16.png'></img><br><br><br><h3>Step:16,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack17.png'></img><br><br><br><h3>Step:17,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack18.png'></img><br><br><br><h3>Step:18,Return seen at Line:10</h3><br>Code executed:<code>    return ans
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack19.png'></img><br><br><br><h3>Step:19,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack20.png'></img><br><br><br><h3>Step:20,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack21.png'></img><br><br><br><h3>Step:21,Return seen at Line:10</h3><br>Code executed:<code>    return ans
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack22.png'></img><br><br><br><h3>Step:22,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack23.png'></img><br><br><br><h3>Step:23,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack24.png'></img><br><br><br><h3>Step:24,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack25.png'></img><br><br><br><h3>Step:25,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack26.png'></img><br><br><br><h3>Step:26,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack27.png'></img><br><br><br><h3>Step:27,Return seen at Line:10</h3><br>Code executed:<code>    return ans
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack28.png'></img><br><br><br><h3>Step:28,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack29.png'></img><br><br><br><h3>Step:29,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack30.png'></img><br><br><br><h3>Step:30,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack31.png'></img><br><br><br><h3>Step:31,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack32.png'></img><br><br><br><h3>Step:32,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack33.png'></img><br><br><br><h3>Step:33,Return seen at Line:10</h3><br>Code executed:<code>    return ans
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack34.png'></img><br><br><br><h3>Step:34,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack35.png'></img><br><br><br><h3>Step:35,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack36.png'></img><br><br><br><h3>Step:36,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack37.png'></img><br><br><br><h3>Step:37,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack38.png'></img><br><br><br><h3>Step:38,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack39.png'></img><br><br><br><h3>Step:39,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack40.png'></img><br><br><br><h3>Step:40,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack41.png'></img><br><br><br><h3>Step:41,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack42.png'></img><br><br><br><h3>Step:42,Return seen at Line:10</h3><br>Code executed:<code>    return ans
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack43.png'></img><br><br><br><h3>Step:43,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack44.png'></img><br><br><br><h3>Step:44,New function call at Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack45.png'></img><br><br><br><h3>Step:45,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack46.png'></img><br><br><br><h3>Step:46,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack47.png'></img><br><br><br><h3>Step:47,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack48.png'></img><br><br><br><h3>Step:48,Return seen at Line:10</h3><br>Code executed:<code>    return ans
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack49.png'></img><br><br><br><h3>Step:49,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack50.png'></img><br><br><br><h3>Step:50,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack51.png'></img><br><br><br><h3>Step:51,Return seen at Line:10</h3><br>Code executed:<code>    return ans
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack52.png'></img><br><br><br><h3>Step:52,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack53.png'></img><br><br><br><h3>Step:53,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack54.png'></img><br><br><br><h3>Step:54,New function call at Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack55.png'></img><br><br><br><h3>Step:55,Return seen at Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack56.png'></img><br><br><br><h3>Step:56,Return seen at Line:10</h3><br>Code executed:<code>    return ans
+</code><br>Stack Trace generated<br><img src='generateParenthesis/stack/call_stack57.png'></img><br><br><br>

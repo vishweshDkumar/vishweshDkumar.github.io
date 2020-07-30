@@ -1,0 +1,111 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> class TreeNode:
+</code><code>     def __init__(self, val=0, left=None, right=None):
+</code><code>         self.val = val
+</code><code>         self.left = left
+</code><code>         self.right = right
+</code><code>     def __str__(self):
+</code><code>         s = str(self.val)
+</code><code>         if self.left:
+</code><code>             s = str(self.left) + " "+s
+</code><code>         if self.right:
+</code><code>             s += " " + str(self.right)
+</code><code>         return s
+</code><code>     def __repr__(self):
+</code><code>         return self.__str__()
+</code><code>     def __eq__(self,other):
+</code><code>         return self.__str__() == other.__str__()
+</code><code> 
+</code><code>   
+</code><code> def inorderTraversal(root):
+</code><code>     head = root # watchvar btree:left:right:val head
+</code><code>     res, stack = [], [] # watchvar ref:head:btree root
+</code><code>     node = None # watchvar ref:head:btree node
+</code><code>     while True:
+</code><code>         while root: 
+</code><code>             stack.append(root)
+</code><code>             root = root.left
+</code><code>         if not stack:
+</code><code>             return res
+</code><code>         node = stack.pop()
+</code><code>         res.append(node.val)
+</code><code>         root = node.right
+</code><code> 
+</code><code> def go():
+</code><code> 	# https://leetcode.com/problems/binary-tree-inorder-traversal/
+</code><code> 	a = TreeNode(1)
+</code><code> 	b = TreeNode(2)
+</code><code> 	c = TreeNode(3)
+</code><code> 	d = TreeNode(4)
+</code><code> 	a.right = b
+</code><code> 	b.left = c
+</code><code> 	b.right = d
+</code><code> 	ans= inorderTraversal(a)</code></pre><h3>Step:1,Line:33</h3><br>Code executed:<code>def go():
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:2,Line:35</h3><br>Code executed:<code>	a = TreeNode(1)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:3,Line:2</h3><br>Code executed:<code>    def __init__(self, val=0, left=None, right=None):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:4,Line:3</h3><br>Code executed:<code>        self.val = val
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:5,Line:4</h3><br>Code executed:<code>        self.left = left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:6,Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:7,Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:8,Line:36</h3><br>Code executed:<code>	b = TreeNode(2)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:9,Line:2</h3><br>Code executed:<code>    def __init__(self, val=0, left=None, right=None):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:10,Line:3</h3><br>Code executed:<code>        self.val = val
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:11,Line:4</h3><br>Code executed:<code>        self.left = left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:12,Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:13,Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:14,Line:37</h3><br>Code executed:<code>	c = TreeNode(3)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:15,Line:2</h3><br>Code executed:<code>    def __init__(self, val=0, left=None, right=None):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:16,Line:3</h3><br>Code executed:<code>        self.val = val
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:17,Line:4</h3><br>Code executed:<code>        self.left = left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:18,Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:19,Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:20,Line:38</h3><br>Code executed:<code>	d = TreeNode(4)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:21,Line:2</h3><br>Code executed:<code>    def __init__(self, val=0, left=None, right=None):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:22,Line:3</h3><br>Code executed:<code>        self.val = val
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:23,Line:4</h3><br>Code executed:<code>        self.left = left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:24,Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:25,Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:26,Line:39</h3><br>Code executed:<code>	a.right = b
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:27,Line:40</h3><br>Code executed:<code>	b.left = c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:28,Line:41</h3><br>Code executed:<code>	b.right = d
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:29,Line:42</h3><br>Code executed:<code>	ans= inorderTraversal(a)</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:30,Line:19</h3><br>Code executed:<code>def inorderTraversal(root):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:31,Line:20</h3><br>Code executed:<code>    head = root # watchvar btree:left:right:val head
+</code><br><img src='inorder_Traversal/trees/head197.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:32,Line:21</h3><br>Code executed:<code>    res, stack = [], [] # watchvar ref:head:btree root
+</code><br><img src='inorder_Traversal/trees/head198.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:33,Line:22</h3><br>Code executed:<code>    node = None # watchvar ref:head:btree node
+</code><br><img src='inorder_Traversal/trees/head199.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:34,Line:23</h3><br>Code executed:<code>    while True:
+</code><br><img src='inorder_Traversal/trees/head200.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:35,Line:24</h3><br>Code executed:<code>        while root: 
+</code><br><img src='inorder_Traversal/trees/head201.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:36,Line:25</h3><br>Code executed:<code>            stack.append(root)
+</code><br><img src='inorder_Traversal/trees/head202.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:37,Line:26</h3><br>Code executed:<code>            root = root.left
+</code><br><img src='inorder_Traversal/trees/head203.png'></img><br><br><br><b>Variable</b> <i>root</i> <b> changed from</b> 1 3 2 4 <b>to</b> None<br><br><h3>Step:38,Line:24</h3><br>Code executed:<code>        while root: 
+</code><br><img src='inorder_Traversal/trees/head204.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:39,Line:27</h3><br>Code executed:<code>        if not stack:
+</code><br><img src='inorder_Traversal/trees/head205.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:40,Line:29</h3><br>Code executed:<code>        node = stack.pop()
+</code><br><img src='inorder_Traversal/trees/head206.png'></img><br><br><br><b>Variable</b> <i>node</i> <b> changed from</b> None <b>to</b> 1 3 2 4<br><br><h3>Step:41,Line:30</h3><br>Code executed:<code>        res.append(node.val)
+</code><br><img src='inorder_Traversal/trees/head207.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:42,Line:31</h3><br>Code executed:<code>        root = node.right
+</code><br><img src='inorder_Traversal/trees/head208.png'></img><br><br><br><b>Variable</b> <i>root</i> <b> changed from</b> None <b>to</b> 3 2 4<br><br><h3>Step:43,Line:24</h3><br>Code executed:<code>        while root: 
+</code><br><img src='inorder_Traversal/trees/head209.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:44,Line:25</h3><br>Code executed:<code>            stack.append(root)
+</code><br><img src='inorder_Traversal/trees/head210.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:45,Line:26</h3><br>Code executed:<code>            root = root.left
+</code><br><img src='inorder_Traversal/trees/head211.png'></img><br><br><br><b>Variable</b> <i>root</i> <b> changed from</b> 3 2 4 <b>to</b> 3<br><br><h3>Step:46,Line:24</h3><br>Code executed:<code>        while root: 
+</code><br><img src='inorder_Traversal/trees/head212.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:47,Line:25</h3><br>Code executed:<code>            stack.append(root)
+</code><br><img src='inorder_Traversal/trees/head213.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:48,Line:26</h3><br>Code executed:<code>            root = root.left
+</code><br><img src='inorder_Traversal/trees/head214.png'></img><br><br><br><b>Variable</b> <i>root</i> <b> changed from</b> 3 <b>to</b> None<br><br><h3>Step:49,Line:24</h3><br>Code executed:<code>        while root: 
+</code><br><img src='inorder_Traversal/trees/head215.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:50,Line:27</h3><br>Code executed:<code>        if not stack:
+</code><br><img src='inorder_Traversal/trees/head216.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:51,Line:29</h3><br>Code executed:<code>        node = stack.pop()
+</code><br><img src='inorder_Traversal/trees/head217.png'></img><br><br><br><b>Variable</b> <i>node</i> <b> changed from</b> 1 3 2 4 <b>to</b> 3<br><br><h3>Step:52,Line:30</h3><br>Code executed:<code>        res.append(node.val)
+</code><br><img src='inorder_Traversal/trees/head218.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:53,Line:31</h3><br>Code executed:<code>        root = node.right
+</code><br><img src='inorder_Traversal/trees/head219.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:54,Line:24</h3><br>Code executed:<code>        while root: 
+</code><br><img src='inorder_Traversal/trees/head220.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:55,Line:27</h3><br>Code executed:<code>        if not stack:
+</code><br><img src='inorder_Traversal/trees/head221.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:56,Line:29</h3><br>Code executed:<code>        node = stack.pop()
+</code><br><img src='inorder_Traversal/trees/head222.png'></img><br><br><br><b>Variable</b> <i>node</i> <b> changed from</b> 3 <b>to</b> 3 2 4<br><br><h3>Step:57,Line:30</h3><br>Code executed:<code>        res.append(node.val)
+</code><br><img src='inorder_Traversal/trees/head223.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:58,Line:31</h3><br>Code executed:<code>        root = node.right
+</code><br><img src='inorder_Traversal/trees/head224.png'></img><br><br><br><b>Variable</b> <i>root</i> <b> changed from</b> None <b>to</b> 4<br><br><h3>Step:59,Line:24</h3><br>Code executed:<code>        while root: 
+</code><br><img src='inorder_Traversal/trees/head225.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:60,Line:25</h3><br>Code executed:<code>            stack.append(root)
+</code><br><img src='inorder_Traversal/trees/head226.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:61,Line:26</h3><br>Code executed:<code>            root = root.left
+</code><br><img src='inorder_Traversal/trees/head227.png'></img><br><br><br><b>Variable</b> <i>root</i> <b> changed from</b> 4 <b>to</b> None<br><br><h3>Step:62,Line:24</h3><br>Code executed:<code>        while root: 
+</code><br><img src='inorder_Traversal/trees/head228.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:63,Line:27</h3><br>Code executed:<code>        if not stack:
+</code><br><img src='inorder_Traversal/trees/head229.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:64,Line:29</h3><br>Code executed:<code>        node = stack.pop()
+</code><br><img src='inorder_Traversal/trees/head230.png'></img><br><br><br><b>Variable</b> <i>node</i> <b> changed from</b> 3 2 4 <b>to</b> 4<br><br><h3>Step:65,Line:30</h3><br>Code executed:<code>        res.append(node.val)
+</code><br><img src='inorder_Traversal/trees/head231.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:66,Line:31</h3><br>Code executed:<code>        root = node.right
+</code><br><img src='inorder_Traversal/trees/head232.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:67,Line:24</h3><br>Code executed:<code>        while root: 
+</code><br><img src='inorder_Traversal/trees/head233.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:68,Line:27</h3><br>Code executed:<code>        if not stack:
+</code><br><img src='inorder_Traversal/trees/head234.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:69,Line:28</h3><br>Code executed:<code>            return res
+</code><br><img src='inorder_Traversal/trees/head235.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:70,Line:28</h3><br>Code executed:<code>            return res
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br>

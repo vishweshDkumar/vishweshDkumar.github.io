@@ -1,0 +1,14 @@
+digraph {
+	label="Graph of variable: mainhead"
+	38 [label=1]
+	39 [label=slow shape=plaintext]
+	39 -> 38 [label="Points To"]
+	40 [label=2]
+	38 -> 40 [label=next]
+	41 [label=3]
+	40 -> 41 [label=next]
+	42 [label=fast shape=plaintext]
+	42 -> 41 [label="Points To"]
+	43 [label=4]
+	41 -> 43 [label=next]
+}

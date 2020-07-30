@@ -1,0 +1,4 @@
+digraph {
+	label="Graph of variable: a"
+	1 [label=10]
+}

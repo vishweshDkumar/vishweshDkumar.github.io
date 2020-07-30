@@ -1,0 +1,24 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> 
+</code><code> def maxArea(height):
+</code><code>     i = 0 # watchvar i
+</code><code>     j = len(height)-1 # watchvar j
+</code><code> 
+</code><code>     maxi = 0 # watchvar maxi
+</code><code>     while i < j:
+</code><code>         if height[i] <= height[j]: 
+</code><code>             overall_height = height[i]
+</code><code>             i += 1
+</code><code>         else:
+</code><code>             overall_height = height[j]
+</code><code>             j -= 1
+</code><code> 
+</code><code>         maxi = max(maxi, (j-i+1)*overall_height)
+</code><code> 
+</code><code> 
+</code><code>     return maxi
+</code><code> 
+</code><code> 
+</code><code> def go():
+</code><code> 	# https://leetcode.com/problems/container-with-most-water/
+</code><code> 	maxArea([1,8,6,2,5,4,8,3,7])</code></pre><h3>Step:1,New function call at Line:23</h3><br>Code executed:<code>	maxArea([1,8,6,2,5,4,8,3,7])</code><br>Stack Trace generated<br><img src='Container with most water/stack/call_stack2.png'></img><br><br><br><h3>Step:2,Return seen at Line:18</h3><br>Code executed:<code>    return maxi
+</code><br>Stack Trace generated<br><img src='Container with most water/stack/call_stack3.png'></img><br><br><br>

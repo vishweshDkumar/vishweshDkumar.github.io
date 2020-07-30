@@ -1,0 +1,6 @@
+digraph {
+	label="Graph of variable: l2"
+	60 [label=30]
+	61 [label=43]
+	60 -> 61 [label=next]
+}

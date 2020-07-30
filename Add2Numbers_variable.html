@@ -1,0 +1,140 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> 
+</code><code> class ListNode:
+</code><code>     def __init__(self, x):
+</code><code>         self.val = x
+</code><code>         self.next = None
+</code><code>         self.prev = None
+</code><code>     def __str__(self):
+</code><code>         if not self.next: return str(self.val)
+</code><code>         else: return str(self.val) + " " + str(self.next)
+</code><code>     def __repr__(self):
+</code><code>         return self.__str__()
+</code><code>     def __eq__(self,other):
+</code><code>         return self.__str__() == other.__str__()
+</code><code> def addTwoNumbers(l1, l2, previous_carry = 0):
+</code><code>     p1 = l1 # watchvar ref:l1:btree p1
+</code><code>     p2 = l2 # watchvar ref:l2:btree p2
+</code><code>     carry = 0 # watchvar carry
+</code><code>     head = ListNode(-1) # watchvar btree:prev:next:val head
+</code><code>     tail = head # watchvar ref:head:btree tail
+</code><code>     while p1 or p2 or carry:
+</code><code>         v1 = p1.val if p1 else 0 # watchvar v1
+</code><code>         v2 = p2.val if p2 else 0 # watchvar v2
+</code><code>         n = v1 + v2 + carry
+</code><code>         carry = n // 10
+</code><code>         n = n % 10
+</code><code>         node = ListNode(n)
+</code><code>         if tail:
+</code><code>             tail.next = node
+</code><code>             tail = node
+</code><code>         else:
+</code><code>             head = node
+</code><code>             tail = node
+</code><code>         p1 = p1.next if p1 else None
+</code><code>         p2 = p2.next if p2 else None
+</code><code>     return head.next
+</code><code> 
+</code><code> 
+</code><code> 
+</code><code> 
+</code><code> def go():
+</code><code>     # https://leetcode.com/problems/add-two-numbers/
+</code><code>     a = ListNode(10) # watchvar btree:prev:next:val a
+</code><code>     b= ListNode(22)  # watchvar a
+</code><code>     c = ListNode(30) # watchvar btree:prev:next:val c
+</code><code>     d = ListNode(43) # watchvar c
+</code><code>     a.next = b 
+</code><code>     c.next = d 
+</code><code>     addTwoNumbers(a,c) </code></pre><h3>Step:1,Line:40</h3><br>Code executed:<code>def go():
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:2,Line:42</h3><br>Code executed:<code>    a = ListNode(10) # watchvar btree:prev:next:val a
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:3,Line:3</h3><br>Code executed:<code>    def __init__(self, x):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:4,Line:4</h3><br>Code executed:<code>        self.val = x
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:5,Line:5</h3><br>Code executed:<code>        self.next = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:6,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:7,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><img src='Add2Numbers/trees/a0.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:8,Line:43</h3><br>Code executed:<code>    b= ListNode(22)  # watchvar a
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:9,Line:3</h3><br>Code executed:<code>    def __init__(self, x):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:10,Line:4</h3><br>Code executed:<code>        self.val = x
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:11,Line:5</h3><br>Code executed:<code>        self.next = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:12,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:13,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><img src='Add2Numbers/trees/a1.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:14,Line:44</h3><br>Code executed:<code>    c = ListNode(30) # watchvar btree:prev:next:val c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:15,Line:3</h3><br>Code executed:<code>    def __init__(self, x):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:16,Line:4</h3><br>Code executed:<code>        self.val = x
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:17,Line:5</h3><br>Code executed:<code>        self.next = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:18,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:19,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><img src='Add2Numbers/trees/a2.png'></img><br><br><br><img src='Add2Numbers/trees/c3.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:20,Line:45</h3><br>Code executed:<code>    d = ListNode(43) # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:21,Line:3</h3><br>Code executed:<code>    def __init__(self, x):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:22,Line:4</h3><br>Code executed:<code>        self.val = x
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:23,Line:5</h3><br>Code executed:<code>        self.next = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:24,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:25,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><img src='Add2Numbers/trees/a4.png'></img><br><br><br><img src='Add2Numbers/trees/c5.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:26,Line:46</h3><br>Code executed:<code>    a.next = b 
+</code><br><img src='Add2Numbers/trees/a6.png'></img><br><br><br><img src='Add2Numbers/trees/c7.png'></img><br><br><br><b>Variable</b> <i>a</i> <b> changed from</b> 10 <b>to</b> 10 22<br><br><h3>Step:27,Line:47</h3><br>Code executed:<code>    c.next = d 
+</code><br><img src='Add2Numbers/trees/a8.png'></img><br><br><br><img src='Add2Numbers/trees/c9.png'></img><br><br><br><b>Variable</b> <i>c</i> <b> changed from</b> 30 <b>to</b> 30 43<br><br><h3>Step:28,Line:48</h3><br>Code executed:<code>    addTwoNumbers(a,c) </code><br><img src='Add2Numbers/trees/l110.png'></img><br><br><br><img src='Add2Numbers/trees/l211.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:29,Line:14</h3><br>Code executed:<code>def addTwoNumbers(l1, l2, previous_carry = 0):
+</code><br><img src='Add2Numbers/trees/l112.png'></img><br><br><br><img src='Add2Numbers/trees/l213.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:30,Line:15</h3><br>Code executed:<code>    p1 = l1 # watchvar ref:l1:btree p1
+</code><br><img src='Add2Numbers/trees/l114.png'></img><br><br><br><img src='Add2Numbers/trees/l215.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:31,Line:16</h3><br>Code executed:<code>    p2 = l2 # watchvar ref:l2:btree p2
+</code><br><img src='Add2Numbers/trees/l116.png'></img><br><br><br><img src='Add2Numbers/trees/l217.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:32,Line:17</h3><br>Code executed:<code>    carry = 0 # watchvar carry
+</code><br><img src='Add2Numbers/trees/l118.png'></img><br><br><br><img src='Add2Numbers/trees/l219.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:33,Line:18</h3><br>Code executed:<code>    head = ListNode(-1) # watchvar btree:prev:next:val head
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:34,Line:3</h3><br>Code executed:<code>    def __init__(self, x):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:35,Line:4</h3><br>Code executed:<code>        self.val = x
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:36,Line:5</h3><br>Code executed:<code>        self.next = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:37,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:38,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><img src='Add2Numbers/trees/l120.png'></img><br><br><br><img src='Add2Numbers/trees/l221.png'></img><br><br><br><img src='Add2Numbers/trees/head22.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:39,Line:19</h3><br>Code executed:<code>    tail = head # watchvar ref:head:btree tail
+</code><br><img src='Add2Numbers/trees/l123.png'></img><br><br><br><img src='Add2Numbers/trees/l224.png'></img><br><br><br><img src='Add2Numbers/trees/head25.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:40,Line:20</h3><br>Code executed:<code>    while p1 or p2 or carry:
+</code><br><img src='Add2Numbers/trees/l126.png'></img><br><br><br><img src='Add2Numbers/trees/l227.png'></img><br><br><br><img src='Add2Numbers/trees/head28.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:41,Line:21</h3><br>Code executed:<code>        v1 = p1.val if p1 else 0 # watchvar v1
+</code><br><img src='Add2Numbers/trees/l129.png'></img><br><br><br><img src='Add2Numbers/trees/l230.png'></img><br><br><br><img src='Add2Numbers/trees/head31.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:42,Line:22</h3><br>Code executed:<code>        v2 = p2.val if p2 else 0 # watchvar v2
+</code><br><img src='Add2Numbers/trees/l132.png'></img><br><br><br><img src='Add2Numbers/trees/l233.png'></img><br><br><br><img src='Add2Numbers/trees/head34.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:43,Line:23</h3><br>Code executed:<code>        n = v1 + v2 + carry
+</code><br><img src='Add2Numbers/trees/l135.png'></img><br><br><br><img src='Add2Numbers/trees/l236.png'></img><br><br><br><img src='Add2Numbers/trees/head37.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:44,Line:24</h3><br>Code executed:<code>        carry = n // 10
+</code><br><img src='Add2Numbers/trees/l138.png'></img><br><br><br><img src='Add2Numbers/trees/l239.png'></img><br><br><br><img src='Add2Numbers/trees/head40.png'></img><br><br><br><b>Variable</b> <i>carry</i> <b> changed from</b> 0 <b>to</b> 4<br><br><h3>Step:45,Line:25</h3><br>Code executed:<code>        n = n % 10
+</code><br><img src='Add2Numbers/trees/l141.png'></img><br><br><br><img src='Add2Numbers/trees/l242.png'></img><br><br><br><img src='Add2Numbers/trees/head43.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:46,Line:26</h3><br>Code executed:<code>        node = ListNode(n)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:47,Line:3</h3><br>Code executed:<code>    def __init__(self, x):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:48,Line:4</h3><br>Code executed:<code>        self.val = x
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:49,Line:5</h3><br>Code executed:<code>        self.next = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:50,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:51,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><img src='Add2Numbers/trees/l144.png'></img><br><br><br><img src='Add2Numbers/trees/l245.png'></img><br><br><br><img src='Add2Numbers/trees/head46.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:52,Line:27</h3><br>Code executed:<code>        if tail:
+</code><br><img src='Add2Numbers/trees/l147.png'></img><br><br><br><img src='Add2Numbers/trees/l248.png'></img><br><br><br><img src='Add2Numbers/trees/head49.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:53,Line:28</h3><br>Code executed:<code>            tail.next = node
+</code><br><img src='Add2Numbers/trees/l150.png'></img><br><br><br><img src='Add2Numbers/trees/l251.png'></img><br><br><br><img src='Add2Numbers/trees/head52.png'></img><br><br><br><b>Variable</b> <i>tail</i> <b> changed from</b> -1 <b>to</b> -1 0<br><br><h3>Step:54,Line:29</h3><br>Code executed:<code>            tail = node
+</code><br><img src='Add2Numbers/trees/l153.png'></img><br><br><br><img src='Add2Numbers/trees/l254.png'></img><br><br><br><img src='Add2Numbers/trees/head55.png'></img><br><br><br><b>Variable</b> <i>tail</i> <b> changed from</b> -1 0 <b>to</b> 0<br><br><h3>Step:55,Line:33</h3><br>Code executed:<code>        p1 = p1.next if p1 else None
+</code><br><img src='Add2Numbers/trees/l156.png'></img><br><br><br><img src='Add2Numbers/trees/l257.png'></img><br><br><br><img src='Add2Numbers/trees/head58.png'></img><br><br><br><b>Variable</b> <i>p1</i> <b> changed from</b> 10 22 <b>to</b> 22<br><br><h3>Step:56,Line:34</h3><br>Code executed:<code>        p2 = p2.next if p2 else None
+</code><br><img src='Add2Numbers/trees/l159.png'></img><br><br><br><img src='Add2Numbers/trees/l260.png'></img><br><br><br><img src='Add2Numbers/trees/head61.png'></img><br><br><br><b>Variable</b> <i>p2</i> <b> changed from</b> 30 43 <b>to</b> 43<br><br><h3>Step:57,Line:20</h3><br>Code executed:<code>    while p1 or p2 or carry:
+</code><br><img src='Add2Numbers/trees/l162.png'></img><br><br><br><img src='Add2Numbers/trees/l263.png'></img><br><br><br><img src='Add2Numbers/trees/head64.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:58,Line:21</h3><br>Code executed:<code>        v1 = p1.val if p1 else 0 # watchvar v1
+</code><br><img src='Add2Numbers/trees/l165.png'></img><br><br><br><img src='Add2Numbers/trees/l266.png'></img><br><br><br><img src='Add2Numbers/trees/head67.png'></img><br><br><br><b>Variable</b> <i>v1</i> <b> changed from</b> 10 <b>to</b> 22<br><br><h3>Step:59,Line:22</h3><br>Code executed:<code>        v2 = p2.val if p2 else 0 # watchvar v2
+</code><br><img src='Add2Numbers/trees/l168.png'></img><br><br><br><img src='Add2Numbers/trees/l269.png'></img><br><br><br><img src='Add2Numbers/trees/head70.png'></img><br><br><br><b>Variable</b> <i>v2</i> <b> changed from</b> 30 <b>to</b> 43<br><br><h3>Step:60,Line:23</h3><br>Code executed:<code>        n = v1 + v2 + carry
+</code><br><img src='Add2Numbers/trees/l171.png'></img><br><br><br><img src='Add2Numbers/trees/l272.png'></img><br><br><br><img src='Add2Numbers/trees/head73.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:61,Line:24</h3><br>Code executed:<code>        carry = n // 10
+</code><br><img src='Add2Numbers/trees/l174.png'></img><br><br><br><img src='Add2Numbers/trees/l275.png'></img><br><br><br><img src='Add2Numbers/trees/head76.png'></img><br><br><br><b>Variable</b> <i>carry</i> <b> changed from</b> 4 <b>to</b> 6<br><br><h3>Step:62,Line:25</h3><br>Code executed:<code>        n = n % 10
+</code><br><img src='Add2Numbers/trees/l177.png'></img><br><br><br><img src='Add2Numbers/trees/l278.png'></img><br><br><br><img src='Add2Numbers/trees/head79.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:63,Line:26</h3><br>Code executed:<code>        node = ListNode(n)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:64,Line:3</h3><br>Code executed:<code>    def __init__(self, x):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:65,Line:4</h3><br>Code executed:<code>        self.val = x
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:66,Line:5</h3><br>Code executed:<code>        self.next = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:67,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:68,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><img src='Add2Numbers/trees/l180.png'></img><br><br><br><img src='Add2Numbers/trees/l281.png'></img><br><br><br><img src='Add2Numbers/trees/head82.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:69,Line:27</h3><br>Code executed:<code>        if tail:
+</code><br><img src='Add2Numbers/trees/l183.png'></img><br><br><br><img src='Add2Numbers/trees/l284.png'></img><br><br><br><img src='Add2Numbers/trees/head85.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:70,Line:28</h3><br>Code executed:<code>            tail.next = node
+</code><br><img src='Add2Numbers/trees/l186.png'></img><br><br><br><img src='Add2Numbers/trees/l287.png'></img><br><br><br><img src='Add2Numbers/trees/head88.png'></img><br><br><br><b>Variable</b> <i>tail</i> <b> changed from</b> 0 <b>to</b> 0 9<br><br><h3>Step:71,Line:29</h3><br>Code executed:<code>            tail = node
+</code><br><img src='Add2Numbers/trees/l189.png'></img><br><br><br><img src='Add2Numbers/trees/l290.png'></img><br><br><br><img src='Add2Numbers/trees/head91.png'></img><br><br><br><b>Variable</b> <i>tail</i> <b> changed from</b> 0 9 <b>to</b> 9<br><br><h3>Step:72,Line:33</h3><br>Code executed:<code>        p1 = p1.next if p1 else None
+</code><br><img src='Add2Numbers/trees/l192.png'></img><br><br><br><img src='Add2Numbers/trees/l293.png'></img><br><br><br><img src='Add2Numbers/trees/head94.png'></img><br><br><br><b>Variable</b> <i>p1</i> <b> changed from</b> 22 <b>to</b> None<br><br><h3>Step:73,Line:34</h3><br>Code executed:<code>        p2 = p2.next if p2 else None
+</code><br><img src='Add2Numbers/trees/l195.png'></img><br><br><br><img src='Add2Numbers/trees/l296.png'></img><br><br><br><img src='Add2Numbers/trees/head97.png'></img><br><br><br><b>Variable</b> <i>p2</i> <b> changed from</b> 43 <b>to</b> None<br><br><h3>Step:74,Line:20</h3><br>Code executed:<code>    while p1 or p2 or carry:
+</code><br><img src='Add2Numbers/trees/l198.png'></img><br><br><br><img src='Add2Numbers/trees/l299.png'></img><br><br><br><img src='Add2Numbers/trees/head100.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:75,Line:21</h3><br>Code executed:<code>        v1 = p1.val if p1 else 0 # watchvar v1
+</code><br><img src='Add2Numbers/trees/l1101.png'></img><br><br><br><img src='Add2Numbers/trees/l2102.png'></img><br><br><br><img src='Add2Numbers/trees/head103.png'></img><br><br><br><b>Variable</b> <i>v1</i> <b> changed from</b> 22 <b>to</b> 0<br><br><b>Variable</b> <i>v1</i> <b> changed from</b> 22 <b>to</b> 0<br><br><h3>Step:76,Line:22</h3><br>Code executed:<code>        v2 = p2.val if p2 else 0 # watchvar v2
+</code><br><img src='Add2Numbers/trees/l1104.png'></img><br><br><br><img src='Add2Numbers/trees/l2105.png'></img><br><br><br><img src='Add2Numbers/trees/head106.png'></img><br><br><br><b>Variable</b> <i>v2</i> <b> changed from</b> 43 <b>to</b> 0<br><br><b>Variable</b> <i>v2</i> <b> changed from</b> 43 <b>to</b> 0<br><br><h3>Step:77,Line:23</h3><br>Code executed:<code>        n = v1 + v2 + carry
+</code><br><img src='Add2Numbers/trees/l1107.png'></img><br><br><br><img src='Add2Numbers/trees/l2108.png'></img><br><br><br><img src='Add2Numbers/trees/head109.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:78,Line:24</h3><br>Code executed:<code>        carry = n // 10
+</code><br><img src='Add2Numbers/trees/l1110.png'></img><br><br><br><img src='Add2Numbers/trees/l2111.png'></img><br><br><br><img src='Add2Numbers/trees/head112.png'></img><br><br><br><b>Variable</b> <i>carry</i> <b> changed from</b> 6 <b>to</b> 0<br><br><h3>Step:79,Line:25</h3><br>Code executed:<code>        n = n % 10
+</code><br><img src='Add2Numbers/trees/l1113.png'></img><br><br><br><img src='Add2Numbers/trees/l2114.png'></img><br><br><br><img src='Add2Numbers/trees/head115.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:80,Line:26</h3><br>Code executed:<code>        node = ListNode(n)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:81,Line:3</h3><br>Code executed:<code>    def __init__(self, x):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:82,Line:4</h3><br>Code executed:<code>        self.val = x
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:83,Line:5</h3><br>Code executed:<code>        self.next = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:84,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:85,Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br><img src='Add2Numbers/trees/l1116.png'></img><br><br><br><img src='Add2Numbers/trees/l2117.png'></img><br><br><br><img src='Add2Numbers/trees/head118.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:86,Line:27</h3><br>Code executed:<code>        if tail:
+</code><br><img src='Add2Numbers/trees/l1119.png'></img><br><br><br><img src='Add2Numbers/trees/l2120.png'></img><br><br><br><img src='Add2Numbers/trees/head121.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:87,Line:28</h3><br>Code executed:<code>            tail.next = node
+</code><br><img src='Add2Numbers/trees/l1122.png'></img><br><br><br><img src='Add2Numbers/trees/l2123.png'></img><br><br><br><img src='Add2Numbers/trees/head124.png'></img><br><br><br><b>Variable</b> <i>tail</i> <b> changed from</b> 9 <b>to</b> 9 6<br><br><h3>Step:88,Line:29</h3><br>Code executed:<code>            tail = node
+</code><br><img src='Add2Numbers/trees/l1125.png'></img><br><br><br><img src='Add2Numbers/trees/l2126.png'></img><br><br><br><img src='Add2Numbers/trees/head127.png'></img><br><br><br><b>Variable</b> <i>tail</i> <b> changed from</b> 9 6 <b>to</b> 6<br><br><h3>Step:89,Line:33</h3><br>Code executed:<code>        p1 = p1.next if p1 else None
+</code><br><img src='Add2Numbers/trees/l1128.png'></img><br><br><br><img src='Add2Numbers/trees/l2129.png'></img><br><br><br><img src='Add2Numbers/trees/head130.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:90,Line:34</h3><br>Code executed:<code>        p2 = p2.next if p2 else None
+</code><br><img src='Add2Numbers/trees/l1131.png'></img><br><br><br><img src='Add2Numbers/trees/l2132.png'></img><br><br><br><img src='Add2Numbers/trees/head133.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:91,Line:20</h3><br>Code executed:<code>    while p1 or p2 or carry:
+</code><br><img src='Add2Numbers/trees/l1134.png'></img><br><br><br><img src='Add2Numbers/trees/l2135.png'></img><br><br><br><img src='Add2Numbers/trees/head136.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:92,Line:35</h3><br>Code executed:<code>    return head.next
+</code><br><img src='Add2Numbers/trees/l1137.png'></img><br><br><br><img src='Add2Numbers/trees/l2138.png'></img><br><br><br><img src='Add2Numbers/trees/head139.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:93,Line:35</h3><br>Code executed:<code>    return head.next
+</code><br><img src='Add2Numbers/trees/a140.png'></img><br><br><br><img src='Add2Numbers/trees/c141.png'></img><br><br><br><i> No Variable change detected in those marked for tracing</i><br><br>

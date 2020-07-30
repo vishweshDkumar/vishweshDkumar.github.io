@@ -1,0 +1,47 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> def productExceptSelf(arr):
+</code><code>     n=len(arr)
+</code><code>     prefarr=[1]*(n+1) # watchvar prefarr
+</code><code>     # prefarr[0]=arr[0]
+</code><code>     for i in reversed(range(n)):
+</code><code>         prefarr[i]=prefarr[i+1]*arr[i]
+</code><code>     ans=[1]*n # watchvar ans
+</code><code>     p=arr[0]
+</code><code>     ans[0]=prefarr[1]
+</code><code>     for i in range(1,n):
+</code><code>         ans[i]=p*prefarr[i+1]
+</code><code>         p*=arr[i]
+</code><code>     return ans
+</code><code> 
+</code><code> def go():
+</code><code>     # https://leetcode.com/problems/product-of-array-except-self/
+</code><code>     productExceptSelf([1,2,3,4])
+</code></pre><h3>Step:1,Line:15</h3><br>Code executed:<code>def go():
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:2,Line:17</h3><br>Code executed:<code>    productExceptSelf([1,2,3,4])
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:3,Line:1</h3><br>Code executed:<code>def productExceptSelf(arr):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:4,Line:2</h3><br>Code executed:<code>    n=len(arr)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:5,Line:3</h3><br>Code executed:<code>    prefarr=[1]*(n+1) # watchvar prefarr
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:6,Line:5</h3><br>Code executed:<code>    for i in reversed(range(n)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:7,Line:6</h3><br>Code executed:<code>        prefarr[i]=prefarr[i+1]*arr[i]
+</code><br><b>Variable</b> <i>prefarr</i> <b> changed from</b> [1, 1, 1, 1, 1] <b>to</b> [1, 1, 1, 4, 1]<br><br><h3>Step:8,Line:5</h3><br>Code executed:<code>    for i in reversed(range(n)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:9,Line:6</h3><br>Code executed:<code>        prefarr[i]=prefarr[i+1]*arr[i]
+</code><br><b>Variable</b> <i>prefarr</i> <b> changed from</b> [1, 1, 1, 4, 1] <b>to</b> [1, 1, 12, 4, 1]<br><br><h3>Step:10,Line:5</h3><br>Code executed:<code>    for i in reversed(range(n)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:11,Line:6</h3><br>Code executed:<code>        prefarr[i]=prefarr[i+1]*arr[i]
+</code><br><b>Variable</b> <i>prefarr</i> <b> changed from</b> [1, 1, 12, 4, 1] <b>to</b> [1, 24, 12, 4, 1]<br><br><h3>Step:12,Line:5</h3><br>Code executed:<code>    for i in reversed(range(n)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:13,Line:6</h3><br>Code executed:<code>        prefarr[i]=prefarr[i+1]*arr[i]
+</code><br><b>Variable</b> <i>prefarr</i> <b> changed from</b> [1, 24, 12, 4, 1] <b>to</b> [24, 24, 12, 4, 1]<br><br><h3>Step:14,Line:5</h3><br>Code executed:<code>    for i in reversed(range(n)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:15,Line:7</h3><br>Code executed:<code>    ans=[1]*n # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:16,Line:8</h3><br>Code executed:<code>    p=arr[0]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:17,Line:9</h3><br>Code executed:<code>    ans[0]=prefarr[1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [1, 1, 1, 1] <b>to</b> [24, 1, 1, 1]<br><br><h3>Step:18,Line:10</h3><br>Code executed:<code>    for i in range(1,n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:19,Line:11</h3><br>Code executed:<code>        ans[i]=p*prefarr[i+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [24, 1, 1, 1] <b>to</b> [24, 12, 1, 1]<br><br><h3>Step:20,Line:12</h3><br>Code executed:<code>        p*=arr[i]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:21,Line:10</h3><br>Code executed:<code>    for i in range(1,n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:22,Line:11</h3><br>Code executed:<code>        ans[i]=p*prefarr[i+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [24, 12, 1, 1] <b>to</b> [24, 12, 8, 1]<br><br><h3>Step:23,Line:12</h3><br>Code executed:<code>        p*=arr[i]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:24,Line:10</h3><br>Code executed:<code>    for i in range(1,n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:25,Line:11</h3><br>Code executed:<code>        ans[i]=p*prefarr[i+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [24, 12, 8, 1] <b>to</b> [24, 12, 8, 6]<br><br><h3>Step:26,Line:12</h3><br>Code executed:<code>        p*=arr[i]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:27,Line:10</h3><br>Code executed:<code>    for i in range(1,n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:28,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:29,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br>

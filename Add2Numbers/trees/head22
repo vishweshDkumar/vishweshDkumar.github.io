@@ -1,0 +1,4 @@
+digraph {
+	label="Graph of variable: head"
+	1 [label=-1]
+}

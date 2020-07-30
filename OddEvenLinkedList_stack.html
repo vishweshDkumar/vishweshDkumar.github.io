@@ -1,0 +1,46 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> class ListNode:
+</code><code>     def __init__(self, x):
+</code><code>         self.val = x
+</code><code>         self.next = None
+</code><code>         self.prev = None
+</code><code>     def __str__(self):
+</code><code>         if not self.next: return str(self.val)
+</code><code>         else: return str(self.val) + " " + str(self.next)
+</code><code>     def __repr__(self):
+</code><code>         return self.__str__()
+</code><code>     def __eq__(self,other):
+</code><code>         return self.__str__() == other.__str__()
+</code><code> def oddEvenList(head):
+</code><code>     if head is None or head.next is None :return head
+</code><code>     mainhead=head # watchvar btree:prev:next:val mainhead
+</code><code>     firsteven=head.next # watchvar ref:mainhead:btree head
+</code><code>     c=1
+</code><code>     prev=head # watchvar ref:mainhead:btree prev
+</code><code>     while(head.next is not None):
+</code><code>         n=head.next
+</code><code>         prev=head 
+</code><code>         head.next=head.next.next
+</code><code>         head=n
+</code><code>         c+=1
+</code><code>     if c%2:head.next=firsteven
+</code><code>     else:prev.next=firsteven
+</code><code>     return mainhead
+</code><code> def go():
+</code><code>     # https://leetcode.com/problems/odd-even-linked-list/
+</code><code>     a = ListNode(1)
+</code><code>     b= ListNode(2)
+</code><code>     c = ListNode(3)
+</code><code>     d = ListNode(4)
+</code><code>     a.next = b
+</code><code>     b.next = c
+</code><code>     c.next = d
+</code><code>     oddEvenList(a)</code></pre><h3>Step:1,New function call at Line:30</h3><br>Code executed:<code>    a = ListNode(1)
+</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack2.png'></img><br><br><br><h3>Step:2,Return seen at Line:5</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack3.png'></img><br><br><br><h3>Step:3,New function call at Line:31</h3><br>Code executed:<code>    b= ListNode(2)
+</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack4.png'></img><br><br><br><h3>Step:4,Return seen at Line:5</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack5.png'></img><br><br><br><h3>Step:5,New function call at Line:32</h3><br>Code executed:<code>    c = ListNode(3)
+</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack6.png'></img><br><br><br><h3>Step:6,Return seen at Line:5</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack7.png'></img><br><br><br><h3>Step:7,New function call at Line:33</h3><br>Code executed:<code>    d = ListNode(4)
+</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack8.png'></img><br><br><br><h3>Step:8,Return seen at Line:5</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack9.png'></img><br><br><br><h3>Step:9,New function call at Line:37</h3><br>Code executed:<code>    oddEvenList(a)</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack10.png'></img><br><br><br><h3>Step:10,Return seen at Line:27</h3><br>Code executed:<code>    return mainhead
+</code><br>Stack Trace generated<br><img src='OddEvenLinkedList/stack/call_stack11.png'></img><br><br><br>

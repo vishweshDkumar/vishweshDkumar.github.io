@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])| line:23| args \{'height': \[1, 8, 6, 2, 5, 4, 8, 3, 7\]\}}}"]
+}

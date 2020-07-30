@@ -1,0 +1,12 @@
+digraph {
+	label="Graph of variable: head"
+	90 [label=-1]
+	91 [label=0]
+	90 -> 91 [label=next]
+	92 [label=9]
+	91 -> 92 [label=next]
+	93 [label=6]
+	92 -> 93 [label=next]
+	94 [label=tail shape=plaintext]
+	94 -> 93 [label="Points To"]
+}

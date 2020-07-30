@@ -1,0 +1,60 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> def lengthOfLongestSubstring(s):
+</code><code>     start = 0 # watchvar start
+</code><code>     maxLength = 0 # watchvar maxLength
+</code><code>     usedChar = {} # watchvar usedChar
+</code><code>     
+</code><code>     for i in range(len(s)):
+</code><code>         if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><code>             start = usedChar[s[i]] + 1
+</code><code>         else:
+</code><code>             maxLength = max(maxLength, i - start + 1)
+</code><code> 
+</code><code>         usedChar[s[i]] = i 
+</code><code> 
+</code><code>     return maxLength
+</code><code> 
+</code><code> def go():
+</code><code> 	 # https://leetcode.com/problems/longest-substring-without-repeating-characters/
+</code><code> 	lengthOfLongestSubstring("abcabcbb")
+</code></pre><h3>Step:1,Line:16</h3><br>Code executed:<code>def go():
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:2,Line:18</h3><br>Code executed:<code>	lengthOfLongestSubstring("abcabcbb")
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:3,Line:1</h3><br>Code executed:<code>def lengthOfLongestSubstring(s):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:4,Line:2</h3><br>Code executed:<code>    start = 0 # watchvar start
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:5,Line:3</h3><br>Code executed:<code>    maxLength = 0 # watchvar maxLength
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:6,Line:4</h3><br>Code executed:<code>    usedChar = {} # watchvar usedChar
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:7,Line:6</h3><br>Code executed:<code>    for i in range(len(s)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:8,Line:7</h3><br>Code executed:<code>        if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:9,Line:10</h3><br>Code executed:<code>            maxLength = max(maxLength, i - start + 1)
+</code><br><b>Variable</b> <i>maxLength</i> <b> changed from</b> 0 <b>to</b> 1<br><br><h3>Step:10,Line:12</h3><br>Code executed:<code>        usedChar[s[i]] = i 
+</code><br><b>Variable</b> <i>usedChar</i> <b> changed from</b> {} <b>to</b> {'a': 0}<br><br><h3>Step:11,Line:6</h3><br>Code executed:<code>    for i in range(len(s)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:12,Line:7</h3><br>Code executed:<code>        if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:13,Line:10</h3><br>Code executed:<code>            maxLength = max(maxLength, i - start + 1)
+</code><br><b>Variable</b> <i>maxLength</i> <b> changed from</b> 1 <b>to</b> 2<br><br><h3>Step:14,Line:12</h3><br>Code executed:<code>        usedChar[s[i]] = i 
+</code><br><b>Variable</b> <i>usedChar</i> <b> changed from</b> {'a': 0} <b>to</b> {'a': 0, 'b': 1}<br><br><h3>Step:15,Line:6</h3><br>Code executed:<code>    for i in range(len(s)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:16,Line:7</h3><br>Code executed:<code>        if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:17,Line:10</h3><br>Code executed:<code>            maxLength = max(maxLength, i - start + 1)
+</code><br><b>Variable</b> <i>maxLength</i> <b> changed from</b> 2 <b>to</b> 3<br><br><h3>Step:18,Line:12</h3><br>Code executed:<code>        usedChar[s[i]] = i 
+</code><br><b>Variable</b> <i>usedChar</i> <b> changed from</b> {'a': 0, 'b': 1} <b>to</b> {'a': 0, 'b': 1, 'c': 2}<br><br><h3>Step:19,Line:6</h3><br>Code executed:<code>    for i in range(len(s)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:20,Line:7</h3><br>Code executed:<code>        if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:21,Line:8</h3><br>Code executed:<code>            start = usedChar[s[i]] + 1
+</code><br><b>Variable</b> <i>start</i> <b> changed from</b> 0 <b>to</b> 1<br><br><h3>Step:22,Line:12</h3><br>Code executed:<code>        usedChar[s[i]] = i 
+</code><br><b>Variable</b> <i>usedChar</i> <b> changed from</b> {'a': 0, 'b': 1, 'c': 2} <b>to</b> {'a': 3, 'b': 1, 'c': 2}<br><br><h3>Step:23,Line:6</h3><br>Code executed:<code>    for i in range(len(s)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:24,Line:7</h3><br>Code executed:<code>        if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:25,Line:8</h3><br>Code executed:<code>            start = usedChar[s[i]] + 1
+</code><br><b>Variable</b> <i>start</i> <b> changed from</b> 1 <b>to</b> 2<br><br><h3>Step:26,Line:12</h3><br>Code executed:<code>        usedChar[s[i]] = i 
+</code><br><b>Variable</b> <i>usedChar</i> <b> changed from</b> {'a': 3, 'b': 1, 'c': 2} <b>to</b> {'a': 3, 'b': 4, 'c': 2}<br><br><h3>Step:27,Line:6</h3><br>Code executed:<code>    for i in range(len(s)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:28,Line:7</h3><br>Code executed:<code>        if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:29,Line:8</h3><br>Code executed:<code>            start = usedChar[s[i]] + 1
+</code><br><b>Variable</b> <i>start</i> <b> changed from</b> 2 <b>to</b> 3<br><br><h3>Step:30,Line:12</h3><br>Code executed:<code>        usedChar[s[i]] = i 
+</code><br><b>Variable</b> <i>usedChar</i> <b> changed from</b> {'a': 3, 'b': 4, 'c': 2} <b>to</b> {'a': 3, 'b': 4, 'c': 5}<br><br><h3>Step:31,Line:6</h3><br>Code executed:<code>    for i in range(len(s)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:32,Line:7</h3><br>Code executed:<code>        if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:33,Line:8</h3><br>Code executed:<code>            start = usedChar[s[i]] + 1
+</code><br><b>Variable</b> <i>start</i> <b> changed from</b> 3 <b>to</b> 5<br><br><h3>Step:34,Line:12</h3><br>Code executed:<code>        usedChar[s[i]] = i 
+</code><br><b>Variable</b> <i>usedChar</i> <b> changed from</b> {'a': 3, 'b': 4, 'c': 5} <b>to</b> {'a': 3, 'b': 6, 'c': 5}<br><br><h3>Step:35,Line:6</h3><br>Code executed:<code>    for i in range(len(s)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:36,Line:7</h3><br>Code executed:<code>        if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:37,Line:8</h3><br>Code executed:<code>            start = usedChar[s[i]] + 1
+</code><br><b>Variable</b> <i>start</i> <b> changed from</b> 5 <b>to</b> 7<br><br><h3>Step:38,Line:12</h3><br>Code executed:<code>        usedChar[s[i]] = i 
+</code><br><b>Variable</b> <i>usedChar</i> <b> changed from</b> {'a': 3, 'b': 6, 'c': 5} <b>to</b> {'a': 3, 'b': 7, 'c': 5}<br><br><h3>Step:39,Line:6</h3><br>Code executed:<code>    for i in range(len(s)):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:40,Line:14</h3><br>Code executed:<code>    return maxLength
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:41,Line:14</h3><br>Code executed:<code>    return maxLength
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br>

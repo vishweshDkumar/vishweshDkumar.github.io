@@ -1,0 +1,31 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> # DFS recursively 
+</code><code> def subsets1(nums):
+</code><code>     res = [] # watchvar res
+</code><code>     dfs(sorted(nums), 0, [], res)
+</code><code>     return res
+</code><code>     
+</code><code> def dfs(nums, index, path, res):
+</code><code>     res.append(path)
+</code><code>     for i in range(index, len(nums)):
+</code><code>         dfs(nums, i+1, path+[nums[i]], res)
+</code><code>         
+</code><code> def go():
+</code><code> 	# https://leetcode.com/problems/subsets/
+</code><code> 	subsets1([1,2,3])</code></pre><h3>Step:1,New function call at Line:14</h3><br>Code executed:<code>	subsets1([1,2,3])</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack2.png'></img><br><br><br><h3>Step:2,New function call at Line:4</h3><br>Code executed:<code>    dfs(sorted(nums), 0, [], res)
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack3.png'></img><br><br><br><h3>Step:3,New function call at Line:10</h3><br>Code executed:<code>        dfs(nums, i+1, path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack4.png'></img><br><br><br><h3>Step:4,New function call at Line:10</h3><br>Code executed:<code>        dfs(nums, i+1, path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack5.png'></img><br><br><br><h3>Step:5,New function call at Line:10</h3><br>Code executed:<code>        dfs(nums, i+1, path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack6.png'></img><br><br><br><h3>Step:6,Return seen at Line:9</h3><br>Code executed:<code>    for i in range(index, len(nums)):
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack7.png'></img><br><br><br><h3>Step:7,Return seen at Line:9</h3><br>Code executed:<code>    for i in range(index, len(nums)):
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack8.png'></img><br><br><br><h3>Step:8,New function call at Line:10</h3><br>Code executed:<code>        dfs(nums, i+1, path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack9.png'></img><br><br><br><h3>Step:9,Return seen at Line:9</h3><br>Code executed:<code>    for i in range(index, len(nums)):
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack10.png'></img><br><br><br><h3>Step:10,Return seen at Line:9</h3><br>Code executed:<code>    for i in range(index, len(nums)):
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack11.png'></img><br><br><br><h3>Step:11,New function call at Line:10</h3><br>Code executed:<code>        dfs(nums, i+1, path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack12.png'></img><br><br><br><h3>Step:12,New function call at Line:10</h3><br>Code executed:<code>        dfs(nums, i+1, path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack13.png'></img><br><br><br><h3>Step:13,Return seen at Line:9</h3><br>Code executed:<code>    for i in range(index, len(nums)):
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack14.png'></img><br><br><br><h3>Step:14,Return seen at Line:9</h3><br>Code executed:<code>    for i in range(index, len(nums)):
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack15.png'></img><br><br><br><h3>Step:15,New function call at Line:10</h3><br>Code executed:<code>        dfs(nums, i+1, path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack16.png'></img><br><br><br><h3>Step:16,Return seen at Line:9</h3><br>Code executed:<code>    for i in range(index, len(nums)):
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack17.png'></img><br><br><br><h3>Step:17,Return seen at Line:9</h3><br>Code executed:<code>    for i in range(index, len(nums)):
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack18.png'></img><br><br><br><h3>Step:18,Return seen at Line:5</h3><br>Code executed:<code>    return res
+</code><br>Stack Trace generated<br><img src='subsets/stack/call_stack19.png'></img><br><br><br>

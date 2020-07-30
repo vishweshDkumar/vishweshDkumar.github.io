@@ -1,0 +1,8 @@
+digraph {
+	label="Graph of variable: l1"
+	47 [label=10]
+	48 [label=22]
+	47 -> 48 [label=next]
+	49 [label=p1 shape=plaintext]
+	49 -> 48 [label="Points To"]
+}

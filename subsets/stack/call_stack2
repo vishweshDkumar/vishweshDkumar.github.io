@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> subsets1([1, 2, 3])| line:14| args \{'nums': \[1, 2, 3\]\}}}"]
+}

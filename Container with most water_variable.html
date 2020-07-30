@@ -1,0 +1,71 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> 
+</code><code> def maxArea(height):
+</code><code>     i = 0 # watchvar i
+</code><code>     j = len(height)-1 # watchvar j
+</code><code> 
+</code><code>     maxi = 0 # watchvar maxi
+</code><code>     while i < j:
+</code><code>         if height[i] <= height[j]: 
+</code><code>             overall_height = height[i]
+</code><code>             i += 1
+</code><code>         else:
+</code><code>             overall_height = height[j]
+</code><code>             j -= 1
+</code><code> 
+</code><code>         maxi = max(maxi, (j-i+1)*overall_height)
+</code><code> 
+</code><code> 
+</code><code>     return maxi
+</code><code> 
+</code><code> 
+</code><code> def go():
+</code><code> 	# https://leetcode.com/problems/container-with-most-water/
+</code><code> 	maxArea([1,8,6,2,5,4,8,3,7])</code></pre><h3>Step:1,Line:21</h3><br>Code executed:<code>def go():
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:2,Line:23</h3><br>Code executed:<code>	maxArea([1,8,6,2,5,4,8,3,7])</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:3,Line:2</h3><br>Code executed:<code>def maxArea(height):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:4,Line:3</h3><br>Code executed:<code>    i = 0 # watchvar i
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:5,Line:4</h3><br>Code executed:<code>    j = len(height)-1 # watchvar j
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:6,Line:6</h3><br>Code executed:<code>    maxi = 0 # watchvar maxi
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:7,Line:7</h3><br>Code executed:<code>    while i < j:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:8,Line:8</h3><br>Code executed:<code>        if height[i] <= height[j]: 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:9,Line:9</h3><br>Code executed:<code>            overall_height = height[i]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:10,Line:10</h3><br>Code executed:<code>            i += 1
+</code><br><b>Variable</b> <i>i</i> <b> changed from</b> 0 <b>to</b> 1<br><br><h3>Step:11,Line:15</h3><br>Code executed:<code>        maxi = max(maxi, (j-i+1)*overall_height)
+</code><br><b>Variable</b> <i>maxi</i> <b> changed from</b> 0 <b>to</b> 8<br><br><h3>Step:12,Line:7</h3><br>Code executed:<code>    while i < j:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:13,Line:8</h3><br>Code executed:<code>        if height[i] <= height[j]: 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:14,Line:12</h3><br>Code executed:<code>            overall_height = height[j]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:15,Line:13</h3><br>Code executed:<code>            j -= 1
+</code><br><b>Variable</b> <i>j</i> <b> changed from</b> 8 <b>to</b> 7<br><br><h3>Step:16,Line:15</h3><br>Code executed:<code>        maxi = max(maxi, (j-i+1)*overall_height)
+</code><br><b>Variable</b> <i>maxi</i> <b> changed from</b> 8 <b>to</b> 49<br><br><h3>Step:17,Line:7</h3><br>Code executed:<code>    while i < j:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:18,Line:8</h3><br>Code executed:<code>        if height[i] <= height[j]: 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:19,Line:12</h3><br>Code executed:<code>            overall_height = height[j]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:20,Line:13</h3><br>Code executed:<code>            j -= 1
+</code><br><b>Variable</b> <i>j</i> <b> changed from</b> 7 <b>to</b> 6<br><br><h3>Step:21,Line:15</h3><br>Code executed:<code>        maxi = max(maxi, (j-i+1)*overall_height)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:22,Line:7</h3><br>Code executed:<code>    while i < j:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:23,Line:8</h3><br>Code executed:<code>        if height[i] <= height[j]: 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:24,Line:9</h3><br>Code executed:<code>            overall_height = height[i]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:25,Line:10</h3><br>Code executed:<code>            i += 1
+</code><br><b>Variable</b> <i>i</i> <b> changed from</b> 1 <b>to</b> 2<br><br><h3>Step:26,Line:15</h3><br>Code executed:<code>        maxi = max(maxi, (j-i+1)*overall_height)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:27,Line:7</h3><br>Code executed:<code>    while i < j:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:28,Line:8</h3><br>Code executed:<code>        if height[i] <= height[j]: 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:29,Line:9</h3><br>Code executed:<code>            overall_height = height[i]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:30,Line:10</h3><br>Code executed:<code>            i += 1
+</code><br><b>Variable</b> <i>i</i> <b> changed from</b> 2 <b>to</b> 3<br><br><h3>Step:31,Line:15</h3><br>Code executed:<code>        maxi = max(maxi, (j-i+1)*overall_height)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:32,Line:7</h3><br>Code executed:<code>    while i < j:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:33,Line:8</h3><br>Code executed:<code>        if height[i] <= height[j]: 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:34,Line:9</h3><br>Code executed:<code>            overall_height = height[i]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:35,Line:10</h3><br>Code executed:<code>            i += 1
+</code><br><b>Variable</b> <i>i</i> <b> changed from</b> 3 <b>to</b> 4<br><br><h3>Step:36,Line:15</h3><br>Code executed:<code>        maxi = max(maxi, (j-i+1)*overall_height)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:37,Line:7</h3><br>Code executed:<code>    while i < j:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:38,Line:8</h3><br>Code executed:<code>        if height[i] <= height[j]: 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:39,Line:9</h3><br>Code executed:<code>            overall_height = height[i]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:40,Line:10</h3><br>Code executed:<code>            i += 1
+</code><br><b>Variable</b> <i>i</i> <b> changed from</b> 4 <b>to</b> 5<br><br><h3>Step:41,Line:15</h3><br>Code executed:<code>        maxi = max(maxi, (j-i+1)*overall_height)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:42,Line:7</h3><br>Code executed:<code>    while i < j:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:43,Line:8</h3><br>Code executed:<code>        if height[i] <= height[j]: 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:44,Line:9</h3><br>Code executed:<code>            overall_height = height[i]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:45,Line:10</h3><br>Code executed:<code>            i += 1
+</code><br><b>Variable</b> <i>i</i> <b> changed from</b> 5 <b>to</b> 6<br><br><h3>Step:46,Line:15</h3><br>Code executed:<code>        maxi = max(maxi, (j-i+1)*overall_height)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:47,Line:7</h3><br>Code executed:<code>    while i < j:
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:48,Line:18</h3><br>Code executed:<code>    return maxi
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:49,Line:18</h3><br>Code executed:<code>    return maxi
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br>

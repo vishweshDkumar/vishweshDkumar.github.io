@@ -1,0 +1,149 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> def longestpalindromicsubstring(s):
+</code><code>     """
+</code><code>     :type s: str
+</code><code>     :rtype: str
+</code><code>     """
+</code><code>     n = len(s)
+</code><code>     if n < 2: return s
+</code><code>     dp= [[0]*n for _ in range(n)] # watchvar dp
+</code><code>     ans = {} # watchvar ans
+</code><code>     for i in range(n-1, -1, -1):
+</code><code>         for j in range(i, n):
+</code><code>             if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><code>                 dp[i][j] = True
+</code><code>                 ans[j-i+1] = s[i:j+1]
+</code><code>             else:
+</code><code>                 dp[i][j] = False
+</code><code>     return ans[max(ans)]
+</code><code> 
+</code><code> 
+</code><code> def go():
+</code><code> 	# https://leetcode.com/problems/longest-palindromic-substring/
+</code><code> 	longestpalindromicsubstring("babad")</code></pre><h3>Step:1,Line:20</h3><br>Code executed:<code>def go():
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:2,Line:22</h3><br>Code executed:<code>	longestpalindromicsubstring("babad")</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:3,Line:1</h3><br>Code executed:<code>def longestpalindromicsubstring(s):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:4,Line:6</h3><br>Code executed:<code>    n = len(s)
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:5,Line:7</h3><br>Code executed:<code>    if n < 2: return s
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:6,Line:8</h3><br>Code executed:<code>    dp= [[0]*n for _ in range(n)] # watchvar dp
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:7,Line:9</h3><br>Code executed:<code>    ans = {} # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:8,Line:10</h3><br>Code executed:<code>    for i in range(n-1, -1, -1):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:9,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:10,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:11,Line:13</h3><br>Code executed:<code>                dp[i][j] = True
+</code><br><b>Variable</b> <i>dp</i> <b> changed from</b> [[0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0]] <b>to</b> [[0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, True]]<br><br><h3>Step:12,Line:14</h3><br>Code executed:<code>                ans[j-i+1] = s[i:j+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> {} <b>to</b> {1: 'd'}<br><br><h3>Step:13,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:14,Line:10</h3><br>Code executed:<code>    for i in range(n-1, -1, -1):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:15,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:16,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:17,Line:13</h3><br>Code executed:<code>                dp[i][j] = True
+</code><br><b>Variable</b> <i>dp</i> <b> changed from</b> [[0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, True]] <b>to</b> [[0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, True, 0],
+ [0, 0, 0, 0, True]]<br><br><h3>Step:18,Line:14</h3><br>Code executed:<code>                ans[j-i+1] = s[i:j+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> {1: 'd'} <b>to</b> {1: 'a'}<br><br><h3>Step:19,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:20,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:21,Line:16</h3><br>Code executed:<code>                dp[i][j] = False
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:22,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:23,Line:10</h3><br>Code executed:<code>    for i in range(n-1, -1, -1):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:24,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:25,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:26,Line:13</h3><br>Code executed:<code>                dp[i][j] = True
+</code><br><b>Variable</b> <i>dp</i> <b> changed from</b> [[0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]] <b>to</b> [[0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, True, 0, 0],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]]<br><br><h3>Step:27,Line:14</h3><br>Code executed:<code>                ans[j-i+1] = s[i:j+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> {1: 'a'} <b>to</b> {1: 'b'}<br><br><h3>Step:28,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:29,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:30,Line:16</h3><br>Code executed:<code>                dp[i][j] = False
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:31,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:32,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:33,Line:16</h3><br>Code executed:<code>                dp[i][j] = False
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:34,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:35,Line:10</h3><br>Code executed:<code>    for i in range(n-1, -1, -1):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:36,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:37,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:38,Line:13</h3><br>Code executed:<code>                dp[i][j] = True
+</code><br><b>Variable</b> <i>dp</i> <b> changed from</b> [[0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, True, False, False],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]] <b>to</b> [[0, 0, 0, 0, 0],
+ [0, True, 0, 0, 0],
+ [0, 0, True, False, False],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]]<br><br><h3>Step:39,Line:14</h3><br>Code executed:<code>                ans[j-i+1] = s[i:j+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> {1: 'b'} <b>to</b> {1: 'a'}<br><br><h3>Step:40,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:41,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:42,Line:16</h3><br>Code executed:<code>                dp[i][j] = False
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:43,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:44,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:45,Line:13</h3><br>Code executed:<code>                dp[i][j] = True
+</code><br><b>Variable</b> <i>dp</i> <b> changed from</b> [[0, 0, 0, 0, 0],
+ [0, True, False, 0, 0],
+ [0, 0, True, False, False],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]] <b>to</b> [[0, 0, 0, 0, 0],
+ [0, True, False, True, 0],
+ [0, 0, True, False, False],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]]<br><br><h3>Step:46,Line:14</h3><br>Code executed:<code>                ans[j-i+1] = s[i:j+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> {1: 'a'} <b>to</b> {1: 'a', 3: 'aba'}<br><br><h3>Step:47,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:48,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:49,Line:16</h3><br>Code executed:<code>                dp[i][j] = False
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:50,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:51,Line:10</h3><br>Code executed:<code>    for i in range(n-1, -1, -1):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:52,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:53,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:54,Line:13</h3><br>Code executed:<code>                dp[i][j] = True
+</code><br><b>Variable</b> <i>dp</i> <b> changed from</b> [[0, 0, 0, 0, 0],
+ [0, True, False, True, False],
+ [0, 0, True, False, False],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]] <b>to</b> [[True, 0, 0, 0, 0],
+ [0, True, False, True, False],
+ [0, 0, True, False, False],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]]<br><br><h3>Step:55,Line:14</h3><br>Code executed:<code>                ans[j-i+1] = s[i:j+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> {1: 'a', 3: 'aba'} <b>to</b> {1: 'b', 3: 'aba'}<br><br><h3>Step:56,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:57,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:58,Line:16</h3><br>Code executed:<code>                dp[i][j] = False
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:59,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:60,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:61,Line:13</h3><br>Code executed:<code>                dp[i][j] = True
+</code><br><b>Variable</b> <i>dp</i> <b> changed from</b> [[True, False, 0, 0, 0],
+ [0, True, False, True, False],
+ [0, 0, True, False, False],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]] <b>to</b> [[True, False, True, 0, 0],
+ [0, True, False, True, False],
+ [0, 0, True, False, False],
+ [0, 0, 0, True, False],
+ [0, 0, 0, 0, True]]<br><br><h3>Step:62,Line:14</h3><br>Code executed:<code>                ans[j-i+1] = s[i:j+1]
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> {1: 'b', 3: 'aba'} <b>to</b> {1: 'b', 3: 'bab'}<br><br><h3>Step:63,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:64,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:65,Line:16</h3><br>Code executed:<code>                dp[i][j] = False
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:66,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:67,Line:12</h3><br>Code executed:<code>            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:68,Line:16</h3><br>Code executed:<code>                dp[i][j] = False
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:69,Line:11</h3><br>Code executed:<code>        for j in range(i, n):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:70,Line:10</h3><br>Code executed:<code>    for i in range(n-1, -1, -1):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:71,Line:17</h3><br>Code executed:<code>    return ans[max(ans)]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:72,Line:17</h3><br>Code executed:<code>    return ans[max(ans)]
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br>

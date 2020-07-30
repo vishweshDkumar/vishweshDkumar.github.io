@@ -1,0 +1,45 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> class ListNode:
+</code><code>     def __init__(self, x):
+</code><code>         self.val = x
+</code><code>         self.next = None
+</code><code>         self.prev = None
+</code><code>     def __str__(self):
+</code><code>         if not self.next: return str(self.val)
+</code><code>         else: return str(self.val) + " " + str(self.next)
+</code><code>     def __repr__(self):
+</code><code>         return self.__str__()
+</code><code>     def __eq__(self,other):
+</code><code>         return self.__str__() == other.__str__()
+</code><code> def removeNthFromEnd(head, n):
+</code><code>     mainhead = head # # watchvar btree:prev:next:val mainhead
+</code><code>     fast = head # watchvar ref:mainhead:btree fast
+</code><code>     slow = head # watchvar ref:mainhead:btree slow
+</code><code>     for _ in range(n):
+</code><code>         fast = fast.next
+</code><code>     if not fast:
+</code><code>         return head.next
+</code><code>     while fast.next:
+</code><code>         fast = fast.next
+</code><code>         slow = slow.next
+</code><code>     slow.next = slow.next.next
+</code><code>     return head
+</code><code> 
+</code><code> def go():
+</code><code>     #https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+</code><code>     a = ListNode(1)
+</code><code>     b= ListNode(2)
+</code><code>     c = ListNode(3)
+</code><code>     d = ListNode(4)
+</code><code>     a.next = b
+</code><code>     b.next = c
+</code><code>     c.next = d
+</code><code>     removeNthFromEnd(a,2)</code></pre><h3>Step:1,New function call at Line:29</h3><br>Code executed:<code>    a = ListNode(1)
+</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack2.png'></img><br><br><br><h3>Step:2,Return seen at Line:5</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack3.png'></img><br><br><br><h3>Step:3,New function call at Line:30</h3><br>Code executed:<code>    b= ListNode(2)
+</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack4.png'></img><br><br><br><h3>Step:4,Return seen at Line:5</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack5.png'></img><br><br><br><h3>Step:5,New function call at Line:31</h3><br>Code executed:<code>    c = ListNode(3)
+</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack6.png'></img><br><br><br><h3>Step:6,Return seen at Line:5</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack7.png'></img><br><br><br><h3>Step:7,New function call at Line:32</h3><br>Code executed:<code>    d = ListNode(4)
+</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack8.png'></img><br><br><br><h3>Step:8,Return seen at Line:5</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack9.png'></img><br><br><br><h3>Step:9,New function call at Line:36</h3><br>Code executed:<code>    removeNthFromEnd(a,2)</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack10.png'></img><br><br><br><h3>Step:10,Return seen at Line:25</h3><br>Code executed:<code>    return head
+</code><br>Stack Trace generated<br><img src='Remove Nth from end of list/stack/call_stack11.png'></img><br><br><br>

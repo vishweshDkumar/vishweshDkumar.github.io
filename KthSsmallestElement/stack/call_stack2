@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> TreeNode(3)| line:33| args \{'val': 3, 'left': None, 'right': None\}}}"]
+}

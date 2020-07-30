@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> productExceptSelf([1, 2, 3, 4])| line:17| args \{'arr': \[1, 2, 3, 4\]\}}}"]
+}

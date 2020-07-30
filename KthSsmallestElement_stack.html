@@ -1,0 +1,49 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> class TreeNode:
+</code><code>     def __init__(self, val=0, left=None, right=None):
+</code><code>         self.val = val
+</code><code>         self.left = left
+</code><code>         self.right = right
+</code><code>     def __str__(self):
+</code><code>         s = str(self.val)
+</code><code>         if self.left:
+</code><code>             s = str(self.left) + " "+s
+</code><code>         if self.right:
+</code><code>             s += " " + str(self.right)
+</code><code>         return s
+</code><code>     def __repr__(self):
+</code><code>         return self.__str__()
+</code><code>     def __eq__(self,other):
+</code><code>         return self.__str__() == other.__str__()
+</code><code> 
+</code><code> 
+</code><code> def kthSmallest(root, k):
+</code><code>     head = root # watchvar btree:left:right:val head
+</code><code>     stack = [] # watchvar ref:head:btree root
+</code><code>     while root or stack:
+</code><code>         while root:
+</code><code>             stack.append(root)
+</code><code>             root = root.left
+</code><code>         root = stack.pop()
+</code><code>         k -= 1
+</code><code>         if k == 0:
+</code><code>             return root.val
+</code><code>         root = root.right
+</code><code> def go():
+</code><code>     # https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+</code><code>     a = TreeNode(3)
+</code><code>     b = TreeNode(1)
+</code><code>     c = TreeNode(4)
+</code><code>     d = TreeNode(2)
+</code><code>     a.left = b
+</code><code>     b.right = d
+</code><code>     a.right = c
+</code><code>     kthSmallest(a,1)</code></pre><h3>Step:1,New function call at Line:33</h3><br>Code executed:<code>    a = TreeNode(3)
+</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack2.png'></img><br><br><br><h3>Step:2,Return seen at Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack3.png'></img><br><br><br><h3>Step:3,New function call at Line:34</h3><br>Code executed:<code>    b = TreeNode(1)
+</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack4.png'></img><br><br><br><h3>Step:4,Return seen at Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack5.png'></img><br><br><br><h3>Step:5,New function call at Line:35</h3><br>Code executed:<code>    c = TreeNode(4)
+</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack6.png'></img><br><br><br><h3>Step:6,Return seen at Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack7.png'></img><br><br><br><h3>Step:7,New function call at Line:36</h3><br>Code executed:<code>    d = TreeNode(2)
+</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack8.png'></img><br><br><br><h3>Step:8,Return seen at Line:5</h3><br>Code executed:<code>        self.right = right
+</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack9.png'></img><br><br><br><h3>Step:9,New function call at Line:40</h3><br>Code executed:<code>    kthSmallest(a,1)</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack10.png'></img><br><br><br><h3>Step:10,Return seen at Line:29</h3><br>Code executed:<code>            return root.val
+</code><br>Stack Trace generated<br><img src='KthSsmallestElement/stack/call_stack11.png'></img><br><br><br>

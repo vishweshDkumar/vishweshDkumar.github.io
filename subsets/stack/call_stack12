@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> subsets1([1, 2, 3])| line:14| args \{'nums': \[1, 2, 3\]\}}|{<f1> sorted(nums)| line:4| args \{'nums': \[1, 2, 3\], 'index': 0, 'path': \[\], 'res': \[\]\}}|{<f2> dfs(nums, i + 1, path + [nums[i]], res)| line:10| args \{'nums': \[1, 2, 3\], 'index': 2, 'path': \[2\], 'res': \[\[\], \[1\], \[1, 2\], \[1, 2, 3\], \[1, 3\]\]\}}}"]
+}

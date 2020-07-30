@@ -1,0 +1,65 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> 
+</code><code> class ListNode:
+</code><code>     def __init__(self, x):
+</code><code>         self.val = x
+</code><code>         self.next = None
+</code><code>         self.prev = None
+</code><code>     def __str__(self):
+</code><code>         if not self.next: return str(self.val)
+</code><code>         else: return str(self.val) + " " + str(self.next)
+</code><code>     def __repr__(self):
+</code><code>         return self.__str__()
+</code><code>     def __eq__(self,other):
+</code><code>         return self.__str__() == other.__str__()
+</code><code> def addTwoNumbers(l1, l2, previous_carry = 0):
+</code><code>     p1 = l1 # watchvar ref:l1:btree p1
+</code><code>     p2 = l2 # watchvar ref:l2:btree p2
+</code><code>     carry = 0 # watchvar carry
+</code><code>     head = ListNode(-1) # watchvar btree:prev:next:val head
+</code><code>     tail = head # watchvar ref:head:btree tail
+</code><code>     while p1 or p2 or carry:
+</code><code>         v1 = p1.val if p1 else 0 # watchvar v1
+</code><code>         v2 = p2.val if p2 else 0 # watchvar v2
+</code><code>         n = v1 + v2 + carry
+</code><code>         carry = n // 10
+</code><code>         n = n % 10
+</code><code>         node = ListNode(n)
+</code><code>         if tail:
+</code><code>             tail.next = node
+</code><code>             tail = node
+</code><code>         else:
+</code><code>             head = node
+</code><code>             tail = node
+</code><code>         p1 = p1.next if p1 else None
+</code><code>         p2 = p2.next if p2 else None
+</code><code>     return head.next
+</code><code> 
+</code><code> 
+</code><code> 
+</code><code> 
+</code><code> def go():
+</code><code>     # https://leetcode.com/problems/add-two-numbers/
+</code><code>     a = ListNode(10) # watchvar btree:prev:next:val a
+</code><code>     b= ListNode(22)  # watchvar a
+</code><code>     c = ListNode(30) # watchvar btree:prev:next:val c
+</code><code>     d = ListNode(43) # watchvar c
+</code><code>     a.next = b 
+</code><code>     c.next = d 
+</code><code>     addTwoNumbers(a,c) </code></pre><h3>Step:1,New function call at Line:42</h3><br>Code executed:<code>    a = ListNode(10) # watchvar btree:prev:next:val a
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack2.png'></img><br><br><br><h3>Step:2,Return seen at Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack3.png'></img><br><br><br><h3>Step:3,New function call at Line:43</h3><br>Code executed:<code>    b= ListNode(22)  # watchvar a
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack4.png'></img><br><br><br><h3>Step:4,Return seen at Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack5.png'></img><br><br><br><h3>Step:5,New function call at Line:44</h3><br>Code executed:<code>    c = ListNode(30) # watchvar btree:prev:next:val c
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack6.png'></img><br><br><br><h3>Step:6,Return seen at Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack7.png'></img><br><br><br><h3>Step:7,New function call at Line:45</h3><br>Code executed:<code>    d = ListNode(43) # watchvar c
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack8.png'></img><br><br><br><h3>Step:8,Return seen at Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack9.png'></img><br><br><br><h3>Step:9,New function call at Line:48</h3><br>Code executed:<code>    addTwoNumbers(a,c) </code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack10.png'></img><br><br><br><h3>Step:10,New function call at Line:18</h3><br>Code executed:<code>    head = ListNode(-1) # watchvar btree:prev:next:val head
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack11.png'></img><br><br><br><h3>Step:11,Return seen at Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack12.png'></img><br><br><br><h3>Step:12,New function call at Line:26</h3><br>Code executed:<code>        node = ListNode(n)
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack13.png'></img><br><br><br><h3>Step:13,Return seen at Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack14.png'></img><br><br><br><h3>Step:14,New function call at Line:26</h3><br>Code executed:<code>        node = ListNode(n)
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack15.png'></img><br><br><br><h3>Step:15,Return seen at Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack16.png'></img><br><br><br><h3>Step:16,New function call at Line:26</h3><br>Code executed:<code>        node = ListNode(n)
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack17.png'></img><br><br><br><h3>Step:17,Return seen at Line:6</h3><br>Code executed:<code>        self.prev = None
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack18.png'></img><br><br><br><h3>Step:18,Return seen at Line:35</h3><br>Code executed:<code>    return head.next
+</code><br>Stack Trace generated<br><img src='Add2Numbers/stack/call_stack19.png'></img><br><br><br>

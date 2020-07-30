@@ -1,0 +1,21 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> def lengthOfLongestSubstring(s):
+</code><code>     start = 0 # watchvar start
+</code><code>     maxLength = 0 # watchvar maxLength
+</code><code>     usedChar = {} # watchvar usedChar
+</code><code>     
+</code><code>     for i in range(len(s)):
+</code><code>         if s[i] in usedChar and start <= usedChar[s[i]]:
+</code><code>             start = usedChar[s[i]] + 1
+</code><code>         else:
+</code><code>             maxLength = max(maxLength, i - start + 1)
+</code><code> 
+</code><code>         usedChar[s[i]] = i 
+</code><code> 
+</code><code>     return maxLength
+</code><code> 
+</code><code> def go():
+</code><code> 	 # https://leetcode.com/problems/longest-substring-without-repeating-characters/
+</code><code> 	lengthOfLongestSubstring("abcabcbb")
+</code></pre><h3>Step:1,New function call at Line:18</h3><br>Code executed:<code>	lengthOfLongestSubstring("abcabcbb")
+</code><br>Stack Trace generated<br><img src='longest-substring-without-repeating-characters/stack/call_stack2.png'></img><br><br><br><h3>Step:2,Return seen at Line:14</h3><br>Code executed:<code>    return maxLength
+</code><br>Stack Trace generated<br><img src='longest-substring-without-repeating-characters/stack/call_stack3.png'></img><br><br><br>

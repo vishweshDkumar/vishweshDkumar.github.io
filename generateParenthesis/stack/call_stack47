@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> generateParenthesis(3)| line:16| args \{'N': 3\}}|{<f1> generateParenthesis(c)| line:7| args \{'N': 2\}}|{<f2> generateParenthesis(c)| line:7| args \{'N': 1\}}|{<f3> generateParenthesis(N - 1 - c)| line:8| args \{'N': 0\}}}"]
+}

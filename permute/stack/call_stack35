@@ -1,0 +1,7 @@
+digraph "Call Stack" {
+	node [shape=record]
+	return_node [label="Condition used : No Test
+ Return Value : [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]" color=red shape=ellipse]
+	call_stack:f0 -> return_node [color=red]
+	call_stack [label="{{<f0> permute(nums)| line:16| args \{'nums': \[1, 2, 3\]\}}}"]
+}

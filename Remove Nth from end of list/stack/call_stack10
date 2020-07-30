@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> removeNthFromEnd(a, 2)| line:36| args \{'head': 1 2 3 4, 'n': 2\}}}"]
+}

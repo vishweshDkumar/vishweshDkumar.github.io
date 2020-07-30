@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> longestpalindromicsubstring('babad')| line:22| args \{'s': 'babad'\}}}"]
+}

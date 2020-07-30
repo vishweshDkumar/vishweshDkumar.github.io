@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> permute(nums)| line:16| args \{'nums': \[1, 2, 3\]\}}|{<f1> dfs1(nums, [], res)| line:10| args \{'nums': \[1, 2, 3\], 'path': \[\], 'res': \[\]\}}|{<f2> dfs1(nums[:i] + nums[i + 1:], path + [nums[i]], res)| line:7| args \{'nums': \[1, 3\], 'path': \[2\], 'res': \[\[1, 2, 3\], \[1, 3, 2\]\]\}}|{<f3> dfs1(nums[:i] + nums[i + 1:], path + [nums[i]], res)| line:7| args \{'nums': \[3\], 'path': \[2, 1\], 'res': \[\[1, 2, 3\], \[1, 3, 2\]\]\}}|{<f4> dfs1(nums[:i] + nums[i + 1:], path + [nums[i]], res)| line:7| args \{'nums': \[\], 'path': \[2, 1, 3\], 'res': \[\[1, 2, 3\], \[1, 3, 2\]\]\}}}"]
+}

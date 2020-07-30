@@ -3,60 +3,86 @@ Outputs for some given questions
 
 Questions are given as below:
 
+Each link contains the source code at the top .
+
 Remove Nth from End of list : https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
-[Images + Changes](/Remove%20Nth%20from%20end%20of%20list.html)
+[Variable Changes + Tree/Linked List Visualizations](/Remove%20Nth%20from%20end%20of%20list_variable.html)
+
+[Stack Trace](Remove%20Nth%20from%20end%20of%20list_stack.html)
 
 Generate Parenthesis : https://leetcode.com/problems/generate-parentheses/
 
-[Images + Changes](generateParenthesis.html)
+[Variable Changes](generateParenthesis_variable.html)
+
+[Stack Visualized](generateParenthesis_stack.html)
 
 Inorder Traversal : https://leetcode.com/problems/binary-tree-inorder-traversal/
 
-[Images + Changes](inorder_Traversal.html)
+[Variable Changes + Tree/Linked List Visualizations](inorder_Traversal_variable.html)
+
+[Stack Visualized](inorder_Traversal_stack.html)
 
 Container with most water : https://leetcode.com/problems/container-with-most-water/
 
-[Images + Changes](/Container%20with%20most%20water.html)
+[Variable Changes](Container%20with%20most%20water_variable.html)
+
+[Stack Visualized](Container%20with%20most%20water_stack.html)
 
 Add Two Numbers : https://leetcode.com/problems/add-two-numbers/
 
-[Images + Changes](Add2Numbers.html)
+[Variable Changes + Tree/Linked List Visualizations](Add2Numbers_variable.html)
+
+[Stack Visualized](Add2Numbers_stack.html)
+
 
 Permute : https://leetcode.com/problems/permutations/
 
-[Images + Changes](permute.html)
+[Variable Changes](permute_variable.html)
+
+[Stack Visualized](permute_stack.html)
+
+
 
 Kth Smallest Element : https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 
-[Images + Changes](KthSsmallestElement.html)
+[Variable Changes + Tree/Linked List Visualizations](KthSsmallestElement_variable.html)
+
+[Stack Visualized](KthSsmallestElement_stack.html)
+
 
 Longest Palindromic Substring : https://leetcode.com/problems/longest-palindromic-substring/
 
-[Images + Changes](Longest%20Palindromic%20Substring.html)
+[Variable Changes](Longest%20Palindromic%20Substring_variable.html)
+
+[Stack Visualized](Longest%20Palindromic%20Substring_stack.html)
+
 
 Product of array except self : https://leetcode.com/problems/product-of-array-except-self/
 
-[Images + Changes](product_of_array_except_self.html)
+
+[Variable Changes](product_of_array_except_self_variable.html)
+
+[Stack Visualized](product_of_array_except_self_stack.html)
 
 Longest Substring without repeating characters : https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-[Images + Changes](longest-substring-without-repeating-characters.html)
 
+[Variable Changes](longest-substring-without-repeating-characters_variable.html)
+
+[Stack Visualized](longest-substring-without-repeating-characters_stack.html)
 
 Subsets : https://leetcode.com/problems/subsets/
 
-[Images + Changes](subsets.html)
+[Variable Changes](subsets_variable.html)
+
+[Stack Visualized](subsets_stack.html)
 
 Odd Even Linked List : https://leetcode.com/problems/odd-even-linked-list/
 
-[Images + Changes](OddEvenLinkedList.html)
+[Variable Changes + Tree/Linked List Visualizations](OddEvenLinkedList_variable.html)
 
-
-
-The corresponding functions are called in [leetcode.py](https://github.com/vishweshDkumar/vishweshDkumar.github.io/blob/master/leetcode.py)
-
-Changes.txt marks the variable changes in format of (prev value , new value , line of change,  file_name)
+[Stack Visualized](OddEvenLinkedList_stack.html)
 
 
 

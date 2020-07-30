@@ -1,0 +1,51 @@
+<style type="text/css">pre.code {  white-space: pre-wrap;}pre.code:before {  counter-reset: listing;}pre.code code {  counter-increment: listing;}pre.code code::before {  content: counter(listing) ". ";  display: inline-block;}  </style><pre class = 'code'><code> def dfs1(nums, path, res):
+</code><code>     if len(nums)==0:
+</code><code>         res.append(path)
+</code><code>         return
+</code><code>         # return # backtracking
+</code><code>     for i in range(len(nums)):
+</code><code>         dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><code> def permute(nums):
+</code><code>     res = [] # watchvar res
+</code><code>     dfs1(nums, [], res)
+</code><code>     return res
+</code><code> 
+</code><code> def go():
+</code><code> 	# https://leetcode.com/problems/permutations/
+</code><code> 	nums = [1,2,3]
+</code><code> 	permute(nums)
+</code></pre><h3>Step:1,New function call at Line:16</h3><br>Code executed:<code>	permute(nums)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack2.png'></img><br><br><br><h3>Step:2,New function call at Line:10</h3><br>Code executed:<code>    dfs1(nums, [], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack3.png'></img><br><br><br><h3>Step:3,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack4.png'></img><br><br><br><h3>Step:4,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack5.png'></img><br><br><br><h3>Step:5,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack6.png'></img><br><br><br><h3>Step:6,Return seen at Line:4</h3><br>Code executed:<code>        return
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack7.png'></img><br><br><br><h3>Step:7,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack8.png'></img><br><br><br><h3>Step:8,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack9.png'></img><br><br><br><h3>Step:9,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack10.png'></img><br><br><br><h3>Step:10,Return seen at Line:4</h3><br>Code executed:<code>        return
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack11.png'></img><br><br><br><h3>Step:11,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack12.png'></img><br><br><br><h3>Step:12,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack13.png'></img><br><br><br><h3>Step:13,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack14.png'></img><br><br><br><h3>Step:14,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack15.png'></img><br><br><br><h3>Step:15,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack16.png'></img><br><br><br><h3>Step:16,Return seen at Line:4</h3><br>Code executed:<code>        return
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack17.png'></img><br><br><br><h3>Step:17,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack18.png'></img><br><br><br><h3>Step:18,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack19.png'></img><br><br><br><h3>Step:19,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack20.png'></img><br><br><br><h3>Step:20,Return seen at Line:4</h3><br>Code executed:<code>        return
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack21.png'></img><br><br><br><h3>Step:21,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack22.png'></img><br><br><br><h3>Step:22,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack23.png'></img><br><br><br><h3>Step:23,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack24.png'></img><br><br><br><h3>Step:24,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack25.png'></img><br><br><br><h3>Step:25,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack26.png'></img><br><br><br><h3>Step:26,Return seen at Line:4</h3><br>Code executed:<code>        return
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack27.png'></img><br><br><br><h3>Step:27,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack28.png'></img><br><br><br><h3>Step:28,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack29.png'></img><br><br><br><h3>Step:29,New function call at Line:7</h3><br>Code executed:<code>        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack30.png'></img><br><br><br><h3>Step:30,Return seen at Line:4</h3><br>Code executed:<code>        return
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack31.png'></img><br><br><br><h3>Step:31,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack32.png'></img><br><br><br><h3>Step:32,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack33.png'></img><br><br><br><h3>Step:33,Return seen at Line:6</h3><br>Code executed:<code>    for i in range(len(nums)):
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack34.png'></img><br><br><br><h3>Step:34,Return seen at Line:11</h3><br>Code executed:<code>    return res
+</code><br>Stack Trace generated<br><img src='permute/stack/call_stack35.png'></img><br><br><br>

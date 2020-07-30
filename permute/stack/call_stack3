@@ -1,0 +1,4 @@
+digraph "Call Stack" {
+	node [shape=record]
+	call_stack [label="{{<f0> permute(nums)| line:16| args \{'nums': \[1, 2, 3\]\}}|{<f1> dfs1(nums, [], res)| line:10| args \{'nums': \[1, 2, 3\], 'path': \[\], 'res': \[\]\}}}"]
+}

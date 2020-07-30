@@ -1,0 +1,7 @@
+digraph "Call Stack" {
+	node [shape=record]
+	return_node [label="Condition used : No Test
+ Return Value : None" color=red shape=ellipse]
+	call_stack:f1 -> return_node [color=red]
+	call_stack [label="{{<f0> addTwoNumbers(a, c)| line:48| args \{'l1': 10 22, 'l2': 30 43, 'previous_carry': 0\}}|{<f1> ListNode(n)| line:26| args \{'x': 9\}}}"]
+}
