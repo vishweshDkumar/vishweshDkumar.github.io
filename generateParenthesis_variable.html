@@ -3,7 +3,10 @@
 </code><code> def generateParenthesis(N):
 </code><code>     if N == 0: return ['']
 </code><code>     ans = [] # watchvar ans
-</code><code>     for c in range(N):
+</code><code>     c = 0 # watchvar c
+</code><code>     left = []  # watchvar left
+</code><code>     right = [] # watchvar right
+</code><code>     for c in range(N): 
 </code><code>         for left in generateParenthesis(c):
 </code><code>             for right in generateParenthesis(N-1-c):
 </code><code>                 ans.append('({}){}'.format(left, right))
@@ -13,200 +16,227 @@
 </code><code> def go():
 </code><code> 	# https://leetcode.com/problems/generate-parentheses/
 </code><code> 
-</code><code> 	generateParenthesis(3)</code></pre><h3>Step:1,Line:13</h3><br>Code executed:<code>def go():
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:2,Line:16</h3><br>Code executed:<code>	generateParenthesis(3)</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:3,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><code> 	generateParenthesis(3)</code></pre><h3>Step:1,Line:16</h3><br>Code executed:<code>def go():
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:2,Line:19</h3><br>Code executed:<code>	generateParenthesis(3)</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:3,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:4,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:5,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:6,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:7,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:8,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:9,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:10,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:11,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:12,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:6,Line:6</h3><br>Code executed:<code>    c = 0 # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:7,Line:7</h3><br>Code executed:<code>    left = []  # watchvar left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:8,Line:8</h3><br>Code executed:<code>    right = [] # watchvar right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:9,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:10,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:11,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:12,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:13,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:14,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:15,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:16,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:17,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:18,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:19,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:20,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:21,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:22,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:23,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:24,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:25,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:26,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:27,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:14,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:15,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:16,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:17,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:18,Line:6</h3><br>Code executed:<code>    c = 0 # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:19,Line:7</h3><br>Code executed:<code>    left = []  # watchvar left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:20,Line:8</h3><br>Code executed:<code>    right = [] # watchvar right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:21,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:22,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:23,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:24,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:25,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:26,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:27,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:28,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:29,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:30,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:31,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:32,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:33,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:34,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:35,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:36,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:37,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:38,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:39,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()()']<br><br><h3>Step:40,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:41,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:42,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:43,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:44,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:45,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:46,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:47,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:48,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:49,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:50,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:51,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:52,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:29,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:30,Line:6</h3><br>Code executed:<code>    c = 0 # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:31,Line:7</h3><br>Code executed:<code>    left = []  # watchvar left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:32,Line:8</h3><br>Code executed:<code>    right = [] # watchvar right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:33,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:34,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:35,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:36,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:37,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:38,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:39,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:40,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:41,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:42,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:43,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:44,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:45,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:46,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:47,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> [] <b>to</b> '()'<br><br><h3>Step:48,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()()']<br><br><h3>Step:49,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:50,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:51,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><b>Variable</b> <i>c</i> <b> changed from</b> 0 <b>to</b> 1<br><br><h3>Step:52,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:53,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:54,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:55,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:56,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:57,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:58,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:59,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:60,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:61,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:62,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:63,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:64,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:65,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:66,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()'] <b>to</b> ['()()', '(())']<br><br><h3>Step:67,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:68,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:69,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:70,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:71,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:72,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()()()']<br><br><h3>Step:73,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:74,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()()'] <b>to</b> ['()()()', '()(())']<br><br><h3>Step:75,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:76,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:77,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:78,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:79,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:80,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:81,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:82,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:83,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:84,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:85,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:86,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:87,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:88,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:89,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:90,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:91,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:92,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:93,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:94,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:95,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:96,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:97,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:98,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:99,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:100,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:101,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:102,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:55,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:56,Line:6</h3><br>Code executed:<code>    c = 0 # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:57,Line:7</h3><br>Code executed:<code>    left = []  # watchvar left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:58,Line:8</h3><br>Code executed:<code>    right = [] # watchvar right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:59,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:60,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:61,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:62,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:63,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:64,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:65,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:66,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:67,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:68,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:69,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:70,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:71,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:72,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:73,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> '' <b>to</b> '()'<br><br><h3>Step:74,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:75,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:76,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:77,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> '()' <b>to</b> ''<br><br><h3>Step:78,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()'] <b>to</b> ['()()', '(())']<br><br><h3>Step:79,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:80,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:81,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:82,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:83,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> [] <b>to</b> '()()'<br><br><h3>Step:84,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()()()']<br><br><h3>Step:85,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> '()()' <b>to</b> '(())'<br><br><h3>Step:86,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()()'] <b>to</b> ['()()()', '()(())']<br><br><h3>Step:87,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:88,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:89,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><b>Variable</b> <i>c</i> <b> changed from</b> 0 <b>to</b> 1<br><br><h3>Step:90,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:91,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:92,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:93,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:94,Line:6</h3><br>Code executed:<code>    c = 0 # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:95,Line:7</h3><br>Code executed:<code>    left = []  # watchvar left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:96,Line:8</h3><br>Code executed:<code>    right = [] # watchvar right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:97,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:98,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:99,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:100,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:101,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:102,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:103,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:104,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:105,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:106,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:107,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:108,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:109,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:110,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:111,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:112,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:113,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:114,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:115,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:116,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()()', '()(())'] <b>to</b> ['()()()', '()(())', '(())()']<br><br><h3>Step:117,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:118,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:119,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:120,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:106,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:107,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:108,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:109,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:110,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:111,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> '' <b>to</b> '()'<br><br><h3>Step:112,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:113,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:114,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:115,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:116,Line:6</h3><br>Code executed:<code>    c = 0 # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:117,Line:7</h3><br>Code executed:<code>    left = []  # watchvar left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:118,Line:8</h3><br>Code executed:<code>    right = [] # watchvar right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:119,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:120,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:121,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:122,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:123,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:124,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:125,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:126,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:123,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:124,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:125,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:126,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:127,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:128,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:129,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:130,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:131,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:132,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:133,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:134,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:135,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:136,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:137,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:138,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:128,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:129,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:130,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:131,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:132,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:133,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> '(())' <b>to</b> '()'<br><br><h3>Step:134,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()()', '()(())'] <b>to</b> ['()()()', '()(())', '(())()']<br><br><h3>Step:135,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:136,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:137,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><b>Variable</b> <i>c</i> <b> changed from</b> 1 <b>to</b> 2<br><br><h3>Step:138,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:139,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:140,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:141,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:142,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:143,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:144,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:145,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:146,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:147,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:148,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()()']<br><br><h3>Step:149,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:150,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:151,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:152,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:153,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:154,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:155,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:156,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:157,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:158,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:159,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:141,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:142,Line:6</h3><br>Code executed:<code>    c = 0 # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:143,Line:7</h3><br>Code executed:<code>    left = []  # watchvar left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:144,Line:8</h3><br>Code executed:<code>    right = [] # watchvar right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:145,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:146,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:147,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:148,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:149,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:150,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:151,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:152,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:153,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:154,Line:6</h3><br>Code executed:<code>    c = 0 # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:155,Line:7</h3><br>Code executed:<code>    left = []  # watchvar left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:156,Line:8</h3><br>Code executed:<code>    right = [] # watchvar right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:157,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:158,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:159,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:160,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:161,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:162,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:163,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:161,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:162,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:163,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:164,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:165,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:166,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:167,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:168,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:169,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:170,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:171,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:172,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:173,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:174,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:175,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()'] <b>to</b> ['()()', '(())']<br><br><h3>Step:176,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:177,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:178,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:179,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:180,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:181,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:182,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:183,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:184,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:185,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()()', '()(())', '(())()'] <b>to</b> ['()()()', '()(())', '(())()', '(()())']<br><br><h3>Step:186,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:187,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:188,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:165,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:166,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:167,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:168,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:169,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:170,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:171,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> [] <b>to</b> '()'<br><br><h3>Step:172,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()()']<br><br><h3>Step:173,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:174,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:175,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><b>Variable</b> <i>c</i> <b> changed from</b> 0 <b>to</b> 1<br><br><h3>Step:176,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:177,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:178,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:179,Line:5</h3><br>Code executed:<code>    ans = [] # watchvar ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:180,Line:6</h3><br>Code executed:<code>    c = 0 # watchvar c
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:181,Line:7</h3><br>Code executed:<code>    left = []  # watchvar left
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:182,Line:8</h3><br>Code executed:<code>    right = [] # watchvar right
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:183,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:184,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:185,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:186,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:187,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:188,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:189,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:190,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:191,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:192,Line:9</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
-</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()()', '()(())', '(())()', '(()())'] <b>to</b> ['()()()', '()(())', '(())()', '(()())', '((()))']<br><br><h3>Step:193,Line:8</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:194,Line:7</h3><br>Code executed:<code>        for left in generateParenthesis(c):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:195,Line:6</h3><br>Code executed:<code>    for c in range(N):
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:196,Line:10</h3><br>Code executed:<code>    return ans
-</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:197,Line:10</h3><br>Code executed:<code>    return ans
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> [] <b>to</b> ''<br><br><h3>Step:192,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> [] <b>to</b> ['()']<br><br><h3>Step:193,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:194,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:195,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:196,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:197,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> '' <b>to</b> '()'<br><br><h3>Step:198,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:199,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:200,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:201,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> '()' <b>to</b> ''<br><br><h3>Step:202,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()'] <b>to</b> ['()()', '(())']<br><br><h3>Step:203,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:204,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:205,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:206,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:207,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> '()' <b>to</b> '()()'<br><br><h3>Step:208,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:209,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:210,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:211,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><b>Variable</b> <i>right</i> <b> changed from</b> '()' <b>to</b> ''<br><br><h3>Step:212,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()()', '()(())', '(())()'] <b>to</b> ['()()()', '()(())', '(())()', '(()())']<br><br><h3>Step:213,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:214,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><b>Variable</b> <i>left</i> <b> changed from</b> '()()' <b>to</b> '(())'<br><br><h3>Step:215,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:216,Line:3</h3><br>Code executed:<code>def generateParenthesis(N):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:217,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:218,Line:4</h3><br>Code executed:<code>    if N == 0: return ['']
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:219,Line:12</h3><br>Code executed:<code>                ans.append('({}){}'.format(left, right))
+</code><br><b>Variable</b> <i>ans</i> <b> changed from</b> ['()()()', '()(())', '(())()', '(()())'] <b>to</b> ['()()()', '()(())', '(())()', '(()())', '((()))']<br><br><h3>Step:220,Line:11</h3><br>Code executed:<code>            for right in generateParenthesis(N-1-c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:221,Line:10</h3><br>Code executed:<code>        for left in generateParenthesis(c):
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:222,Line:9</h3><br>Code executed:<code>    for c in range(N): 
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:223,Line:13</h3><br>Code executed:<code>    return ans
+</code><br><i> No Variable change detected in those marked for tracing</i><br><br><h3>Step:224,Line:13</h3><br>Code executed:<code>    return ans
 </code><br><i> No Variable change detected in those marked for tracing</i><br><br>

@@ -4,5 +4,5 @@ digraph "Call Stack" {
 
  Return Value : ['']" color=red shape=ellipse]
 	call_stack:f2 -> return_node [color=red]
-	call_stack [label="{{<f0> generateParenthesis(3)| line:16| args \{'N': 3\}}|{<f1> generateParenthesis(N - 1 - c)| line:8| args \{'N': 2\}}|{<f2> generateParenthesis(N - 1 - c)| line:8| args \{'N': 0\}}}"]
+	call_stack [label="{{<f0> generateParenthesis(3)| line:19| args \{'N': 3\}}|{<f1> generateParenthesis(N - 1 - c)| line:11| args \{'N': 2\}}|{<f2> generateParenthesis(N - 1 - c)| line:11| args \{'N': 0\}}}"]
 }
