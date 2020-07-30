@@ -1,0 +1,14 @@
+digraph {
+	label="Graph of variable: root"
+	85 [label=50]
+	86 [label=30]
+	85 -> 86 [label=left]
+	87 [label=20]
+	86 -> 87 [label=left]
+	88 [label=40]
+	86 -> 88 [label=right]
+	89 [label=70]
+	85 -> 89 [label=right]
+	90 [label=60]
+	89 -> 90 [label=left]
+}

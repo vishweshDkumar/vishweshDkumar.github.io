@@ -8,16 +8,7 @@ def go(matrix):
     sol = demo2.Solution(matrix)
     ans = sol.findPath()
 
-    # Things left
-    # Check for variable deletion locally
-    # Check for global variables existence
 
-
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.nextr = None
-        self.nextl = None
 
 
 def go2():
@@ -29,6 +20,20 @@ def go2():
     binarySearch(root, -2)
 
 
+
+def main():
+    go([[1, 0, 1, 1, 0],[1, 1, 0, 0, 1],[0, 1, 1, 1, 0],[0, 0, 0, 1, 1]])
+
+
+if __name__ == "__main__":
+    main()
+    # print("Done")
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.nextr = None
+        self.nextl = None
+
 def binarySearch(root, target: int):
     x = root  # watchvar ref:root:btree x
     while x is not None:
@@ -39,15 +44,3 @@ def binarySearch(root, target: int):
         else:
             x = x.nextl
     return None
-
-
-def main():
-    go([[1, 0, 1, 1, 0],
-        [1, 1, 0, 0, 1],
-        [0, 1, 1, 1, 0],
-        [0, 0, 0, 1, 1]])
-
-
-if __name__ == "__main__":
-    main()
-    # print("Done")

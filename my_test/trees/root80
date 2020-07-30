@@ -1,0 +1,14 @@
+digraph {
+	label="Graph of variable: root"
+	53 [label=50]
+	54 [label=30]
+	53 -> 54 [label=left]
+	55 [label=20]
+	54 -> 55 [label=left]
+	56 [label=40]
+	54 -> 56 [label=right]
+	57 [label=70]
+	53 -> 57 [label=right]
+	58 [label=x shape=plaintext]
+	58 -> 57 [label="Points To"]
+}

@@ -10,12 +10,12 @@ class Solution:
         self.dp = [[0] * m for i in range(n)]  # watchvar self.dp
         self.dp[-1][-1] = 4
         ans = self.hasPath(0, 0)
-        helper.DEBUG = 0
+        helper.DEBUG = 0  # Changing value of global
         return ans
 
     def hasPath(self, i, j):
         n, m = len(self.matrix), len(self.matrix[0])
-        # helper.dbg(self.dp + [i, j])  # Function call to debug
+        helper.dbg(self.dp + [i, j])  # Function call to debug
         if i >= n or i < 0 or j >= m or j < 0:  # Out of bounds
             return False
         if self.matrix[i][j] == 0:
